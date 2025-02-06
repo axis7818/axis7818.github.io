@@ -18,7 +18,7 @@ I work professionally as a Senior Software Engineer on Microsoft's [Industry Sol
 
 I got my start in software like many others, wanting to make games. This lead me to learn a ton about computer graphics programming as well as various platforms for developing applications including cross-platform game engines, mobile apps, and web dev.
 
-While in school, I was fortunate enough to be part of the [Worldspinner](https://worldspinner.com/) team where I developed a variety of tools to empower creatives to build people, cultures, and worlds for their games and stories. At Worldspinner, I played a big role in mobile platform integration and graphics development for the [PortraitWorks](https://worldspinner.com/portraits.html) mobile app.
+While in school, I was fortunate enough to be part of the [Worldspinner](https://worldspinner.com/) team where I developed a variety of tools to empower creatives to build people, cultures, and worlds for their games and stories. At Worldspinner, I built the mobile platform integration and 2D render engine for the [PortraitWorks](https://worldspinner.com/portraits.html) mobile app.
 
 # And Some Personal Stuff
 
