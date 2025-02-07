@@ -37,6 +37,12 @@ winget install getzola.zola
 zola serve
 ```
 
+### Alternatively, Use Docker
+
+```sh
+docker run -u "$(id -u):$(id -g)" -v $PWD:/app --workdir /app -p 8080:8080 ghcr.io/getzola/zola:v0.19.1 serve --interface 0.0.0.0 --port 8080 --base-url localhost
+```
+
 ## Publishing Updates
 
 Changes pushed to the `main` branch of the GitHub repository are published to the public site. The static assets are built with the [build-and-deploy.yml](.github/workflows/build-and-deploy.yml) GitHub Actions workflow and [GitHub Pages](https://pages.github.com/) hosts assets in the [`gh-pages`](https://github.com/axis7818/axis7818.github.io/tree/gh-pages) branch of the repository.
