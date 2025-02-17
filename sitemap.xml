@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="https://camerontaylor.dev/sitemap_style.xsl" type="text/xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://camerontaylor.dev/</loc>
+    </url>
+    <url>
+        <loc>https://camerontaylor.dev/archive/</loc>
+    </url>
+    <url>
+        <loc>https://camerontaylor.dev/blog/</loc>
+    </url>
+    <url>
+        <loc>https://camerontaylor.dev/blog/about-me/</loc>
+        <lastmod>2025-01-25</lastmod>
+    </url>
+    <url>
+        <loc>https://camerontaylor.dev/blog/hello/</loc>
+        <lastmod>2025-01-25</lastmod>
+    </url>
+    <url>
+        <loc>https://camerontaylor.dev/blog/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://camerontaylor.dev/blog/portrait-works/</loc>
+        <lastmod>2020-01-14</lastmod>
+    </url>
+    <url>
+        <loc>https://camerontaylor.dev/projects/</loc>
+    </url>
+    <url>
+        <loc>https://camerontaylor.dev/projects/axis7818-zsh-theme/</loc>
+    </url>
+    <url>
+        <loc>https://camerontaylor.dev/projects/camerontaylor-dev/</loc>
+    </url>
+    <url>
+        <loc>https://camerontaylor.dev/tags/</loc>
+    </url>
+    <url>
+        <loc>https://camerontaylor.dev/tags/software/</loc>
+    </url>
+</urlset>

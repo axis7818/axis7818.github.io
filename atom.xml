@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://camerontaylor.dev/feed_style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <tabi:metadata xmlns:tabi="https://github.com/welpo/tabi">
+        <tabi:base_url>https:&#x2F;&#x2F;camerontaylor.dev&#x2F;</tabi:base_url>
+        <tabi:separator>
+            •
+        </tabi:separator>
+        <tabi:about_feeds>This is a web feed, also known as an Atom feed. Subscribe by copying the URL from the address bar into your newsreader. Visit About Feeds to learn more and get started. It&#x27;s free.</tabi:about_feeds>
+        <tabi:visit_the_site>Visit website</tabi:visit_the_site>
+        <tabi:recent_posts>Recent posts</tabi:recent_posts>
+        <tabi:last_updated_on>Updated on $DATE</tabi:last_updated_on>
+        <tabi:default_theme></tabi:default_theme>
+        <tabi:post_listing_date>both</tabi:post_listing_date>
+        <tabi:current_section>~&#x2F;camerontaylor.dev</tabi:current_section>
+    </tabi:metadata><link rel="extra-stylesheet" href="https://camerontaylor.dev/skins/axis7818.css?h=b46f78a940573394e378" /><title>~/camerontaylor.dev</title>
+        <subtitle>A personal website for Cameron Taylor</subtitle>
+    <link href="https://camerontaylor.dev/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://camerontaylor.dev" rel="alternate" type="text/html"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-01-25T00:00:00+00:00</updated>
+    <id>https://camerontaylor.dev/atom.xml</id><entry xml:lang="en">
+        <title>Who is Cameron?</title>
+        <published>2025-01-25T00:00:00+00:00</published>
+        <updated>2025-01-25T00:00:00+00:00</updated>
+        <author>
+            <name>Cameron Taylor</name>
+        </author>
+        <link rel="alternate" href="https://camerontaylor.dev/blog/about-me/" type="text/html"/>
+        <id>https://camerontaylor.dev/blog/about-me/</id>
+        
+            <content type="html">&lt;h1 id=&quot;i-am-a-software-engineer&quot;&gt;I am a Software Engineer&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;keyboard.png&quot; alt=&quot;mouse and keyboard on a desk&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I am a Software Engineer who is driven by a passion for learning and applying new technologies in innovative ways. Through my work, I strive to build clear and simple solutions to challenging problems in cloud computing, systems programming, and computer graphics. I have designed and built software systems that provide value for organizations ranging from small start-up teams to some of the world’s largest enterprise businesses.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;microsoft&quot;&gt;Microsoft&lt;&#x2F;h2&gt;
+&lt;p&gt;I work professionally as a Senior Software Engineer on Microsoft’s &lt;a href=&quot;https:&#x2F;&#x2F;microsoft.github.io&#x2F;code-with-engineering-playbook&#x2F;ISE&#x2F;&quot;&gt;Industry Solutions Engineering (ISE)&lt;&#x2F;a&gt; team where I help solve the toughest technical challenges that companies are facing in the modern Cloud Computing landscape.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;background&quot;&gt;Background&lt;&#x2F;h2&gt;
+&lt;p&gt;I got my start in software like many others, wanting to make games. This lead me to learn a ton about computer graphics programming as well as various platforms for developing applications including cross-platform game engines, mobile apps, and web dev.&lt;&#x2F;p&gt;
+&lt;p&gt;While in school, I was fortunate enough to be part of the &lt;a href=&quot;https:&#x2F;&#x2F;worldspinner.com&#x2F;&quot;&gt;Worldspinner&lt;&#x2F;a&gt; team where I developed a variety of tools to empower creatives to build people, cultures, and worlds for their games and stories. At Worldspinner, I built the mobile platform integration and 2D render engine for the &lt;a href=&quot;https:&#x2F;&#x2F;worldspinner.com&#x2F;portraits.html&quot;&gt;PortraitWorks&lt;&#x2F;a&gt; mobile app.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;and-some-personal-stuff&quot;&gt;And Some Personal Stuff&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;cameron-zion.png&quot; alt=&quot;cameron in zion&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I am fortunate enough to work a fully-remote job in Sonoma County, CA where I was born and raised. I live with my dog, Hughie, and enjoy travel when my job and life allows.&lt;&#x2F;p&gt;
+&lt;p&gt;My hobby is collecting hobbies. In my free time, I enjoy hiking, reading, gaming, cooking, skiing, speed cubing, building keyboards, and music.&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">A little bit about myself</summary>
+        </entry><entry xml:lang="en">
+        <title>Hello, World!</title>
+        <published>2025-01-25T00:00:00+00:00</published>
+        <updated>2025-01-25T00:00:00+00:00</updated>
+        <author>
+            <name>Cameron Taylor</name>
+        </author>
+        <link rel="alternate" href="https://camerontaylor.dev/blog/hello/" type="text/html"/>
+        <id>https://camerontaylor.dev/blog/hello/</id>
+        
+            <content type="html">&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;keyboard.png&quot; alt=&quot;mouse and keyboard on a desk&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This is my first blog post on my new website! Look forward to more as I work on porting over my previous website and update those posts.&lt;&#x2F;p&gt;
+&lt;p&gt;I also intend on contributing posts more regularly going forward!&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">My first blog post</summary>
+        </entry><entry xml:lang="en">
+        <title>PortraitWorks</title>
+        <published>2020-01-14T00:00:00+00:00</published>
+        <updated>2020-01-14T00:00:00+00:00</updated>
+        <author>
+            <name>Cameron Taylor</name>
+        </author>
+        <link rel="alternate" href="https://camerontaylor.dev/blog/portrait-works/" type="text/html"/>
+        <id>https://camerontaylor.dev/blog/portrait-works/</id>
+        
+            <content type="html">&lt;h4 id=&quot;check-out-portraitworks-and-download-it-on-ios-or-android&quot; class=&quot;centered-text&quot;&gt;Check out &lt;a href=&quot;https:&#x2F;&#x2F;www.portrait.works&#x2F;&quot;&gt;PortraitWorks&lt;&#x2F;a&gt; and download it on iOS or Android!&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;portraits.jpg&quot; alt=&quot;portraits&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;A lot of my free time and energy has been put into developing Portrait Workshop with with the Worldspinner team, and we have &lt;a href=&quot;https:&#x2F;&#x2F;www.kickstarter.com&#x2F;projects&#x2F;worldspinner&#x2F;portrait-workshop&#x2F;&quot;&gt;launched a kickstarter&lt;&#x2F;a&gt; that will help us bring it to market. Check it out if you are looking for a great tool to build characters for games, stories, or online avatars! Here are some examples:&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">A post about the PortraitWorks Kickstarter</summary>
+        </entry>
+</feed>
