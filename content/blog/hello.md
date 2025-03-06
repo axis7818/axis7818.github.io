@@ -2,6 +2,9 @@
 title = "Hello, World!"
 date = "2025-01-25"
 description = "My first blog post"
+
+[extra]
+local_image = "img/keyboard.png"
 +++
 
 ![mouse and keyboard on a desk](/img/keyboard.png)

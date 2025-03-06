@@ -1,7 +1,7 @@
 +++
 title = "camerontaylor.dev"
 description = "My personal website that you are currently looking at"
-weight = 1
+weight = 10
 template = "page.html"
 
 [taxonomies]
