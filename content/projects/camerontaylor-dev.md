@@ -1,6 +1,6 @@
 +++
 title = "camerontaylor.dev"
-description = "My personal website that you are currently looking at."
+description = "My personal website that you are currently looking at"
 weight = 1
 template = "page.html"
 
