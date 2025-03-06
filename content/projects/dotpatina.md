@@ -5,7 +5,7 @@ weight = 1
 template = "page.html"
 
 [taxonomies]
-tags = ["software", "config", "rust"]
+tags = ["Software", "Config", "Rust"]
 
 [extra]
 link_to = "https://github.com/axis7818/dotpatina"
