@@ -9,7 +9,7 @@ tags = ["software", "config", "rust"]
 
 [extra]
 link_to = "https://github.com/axis7818/dotpatina"
-local_image = ""
+local_image = "img/dotpatina/dotpatina.png"
 +++
 
 `dotpatina` is a rust application for managing system dotfiles and configuration.
