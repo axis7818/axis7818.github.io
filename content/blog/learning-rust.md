@@ -46,17 +46,40 @@ Before really building anything, I started with the general Rust tutorials.
 1. [rustlings](https://rustlings.cool/): Exercises to test Rust knowledge
 1. [Learn X in Y Minutes (Where X = Rust)](https://learnxinyminutes.com/rust/): My personal favorite website for getting familiar with a new language
 
-These were good introductions and served to introduce me to [cargo](https://doc.rust-lang.org/cargo/guide/why-cargo-exists.html), Rust's toolchain, and concepts (like [borrowing](https://doc.rust-lang.org/rust-by-example/scope/borrow.html)).
+These were good introductions and served to introduce me to [cargo](https://doc.rust-lang.org/cargo/guide/why-cargo-exists.html), Rust's toolchain, and concepts (like [borrowing](https://doc.rust-lang.org/rust-by-example/scope/borrow.html) and [lifetimes](https://doc.rust-lang.org/rust-by-example/scope/lifetime.html)).
 
 ## Learning Rust with AI Assistance
 
+AI is helpful as a tutor. Uses for AI when learning a language.
+
+- explaining errors
+- asking questions when you don't have the right vocabulary
+
+However, it is easy to unknowingly generate tech debt.
+
+It is important to study the generated code to understand what it does.
+
+Automated testing is important for validating AI-generated code.
+
 # Development Environment
 
-- NeoVim
-- VSCode
-- Rust Rover
+## VSCode vs Rust Rover
+
+- best test running & exploring
+- best debugging
+- integrated tools
+  - documentation window
+
+# Thoughts on Rust
+
+## When it "Clicks", It Feels Great
+
+## Consistent Ecosystem
+
+## Modern but Hieroglyphic
 
 # Takeaways
 
 1. It is satisfying to build something for the sake of learning (like making your own game engine)
+1. Rust is a great language
 1. Using AI as a beginner vs expert
