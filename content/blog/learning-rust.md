@@ -7,7 +7,7 @@ description = "My experience learning Rust and building dotpatina"
 tags = ["Software", "Rust", "AI"]
 
 [extra]
-local_image = ""
+local_image = "img/unsplash/thomas-tastet-0eqgB57xMeA-unsplash.jpg"
 +++
 
 Recently, I learned [Rust](https://www.rust-lang.org/) to build [dotpatina](https://github.com/axis7818/dotpatina). And along the way, I tried some AI tools too.
