@@ -1,6 +1,6 @@
 +++
 title = "Learning Rust and Building a CLI"
-date = "2025-03-05"
+date = "2025-03-13"
 description = "My experience learning Rust and building dotpatina"
 
 [taxonomies]
@@ -24,6 +24,8 @@ Here is an example of it in action:
 
 ![patina apply gif](/img/dotpatina/update-patina.gif)
 
+For more information about dotpatina, see the [GitHub repository](https://github.com/axis7818/dotpatina).
+
 # Being a Beginner Again
 
 I chose Rust primarily because I have never used it before. And, its [performance](https://niklas-heer.github.io/speed-comparison/) & [memory safety](https://www.nsa.gov/Press-Room/Press-Releases-Statements/Press-Release-View/Article/3608324/us-and-international-partners-issue-recommendations-to-secure-software-products/) guarantees sound like it would make a fun language for future projects.
@@ -31,8 +33,6 @@ I chose Rust primarily because I have never used it before. And, its [performanc
 My objective was to build a "production ready" (in quotes because I have no expectations that anyone other than me will use dotpatina) tool from the ground up using a new language and toolchain. I just wanted to be a beginner again, and Rust's famously steep learning curve seemed like the perfect choice.
 
 ![Rust learning curve](/img/dotpatina/rust_learning_curve.png)
-
-And indeed it was.
 
 ## Beginner Rust Resources
 
@@ -64,11 +64,11 @@ Generally, I found Rust Rover to be the better experience for working directly w
 
 # Learning Rust with AI Assistance
 
-After learning the basics of Rust, but before diving into Rust development, I decided to make a conscious effort to use [GitHub Copilot](https://github.com/features/copilot) as an AI programming assistant. This was my first honest effort using these tools on a "real" project. So, I will summarize what I thought about GitHub Copilot with tooling that I am not an expert in.
+After learning the basics of Rust, but before diving into Rust development, I decided to make a conscious effort to use [GitHub Copilot](https://github.com/features/copilot) (with the o1 preview model) as an AI programming assistant. This was my first honest effort using these tools on a "real" project. So, I will summarize what I thought about GitHub Copilot with tooling that I am not an expert in.
 
 ## Explaining Errors
 
-By far, my favorite use of GitHub Copilot is to help explain an error. It doesn't take long after starting a Rust program until running into your first compiler error. And, a regular part of working with Rust is dealing with the borrow checker. Since there are whole classes of compile time errors that would be runtime errors in traditional languages, it is very easy to provide error information as context to GitHub Copilot.
+My favorite use of GitHub Copilot is explaining errors. It doesn't take long after starting a Rust program until running into your first compiler error. And, a regular part of working with Rust is dealing with the borrow checker. Since there are whole classes of compile time errors that would be runtime errors in traditional languages, it is very easy to provide error information as context to GitHub Copilot.
 
 Before too long, I found myself defaulting to GitHub Copilot to explain an error. Invoking the `/explain` quick action is just a keyboard shortcut away, and is much quicker than copying relevant error information, searching the web, and finding a relevant ([probably Stack Overflow](https://stackoverflow.com/questions/76758400/cannot-return-value-referencing-local-variable-data-owned-by-current-function)) link.
 
@@ -86,9 +86,7 @@ The GitHub Copilot chat view shows what portion of the code was referenced and e
 
 **So, why is this my favorite part of using GitHub Copilot?**
 
-Well, because it helped me explore the error **as it related to my code specifically**. GitHub Copilot generally accounts for specifics to my codebase that are provided via context. When simply searching for error help online, the search results are independent of the code subject to the error. It becomes the responsibility of the programmer to translate help to their codebase. GitHut Copilot helps with this translation.
-
-{{ admonition(type="note", icon="tip", text="The root cause of this issue turned out to be a self-referential data structure and building the returned object, `Ok((patina, render))`.") }}
+Well, because it helped me explore the error **as it related to my code specifically**. GitHub Copilot generally accounts for specifics to my codebase that are provided via context. When simply searching for error help online, the search results are independent of the code subject to the error. It becomes the responsibility of the programmer to translate help to their codebase. GitHub Copilot helps with this translation.
 
 In other instances of explaining and fixing errors, GitHub Copilot would provide solutions that technically worked. These **technically correct** solutions fell into 3 buckets (in order of frequency):
 
@@ -96,7 +94,7 @@ In other instances of explaining and fixing errors, GitHub Copilot would provide
 2. Solutions that were not the "best", and I had to continue iterating before settling on a final implementation.
 3. Solutions that were the "best" because they were **better** than my initial intentions.
 
-This experience did not completely replace [RTFM](https://en.wikipedia.org/wiki/RTFM) or web search. The challenge seems to be identifying an providing the proper context to GitHub Copilot to generate a helpful response. But, it has become my first line of defense against the <u class="red-squiggly">red underlines</u> in my IDE.
+This experience did not completely replace [RTFM](https://en.wikipedia.org/wiki/RTFM) or web search. The challenge seems to be identifying and providing the proper context to GitHub Copilot to generate a helpful response. But, it has become my first line of defense against the <u class="red-squiggly">red underlines</u> in my IDE.
 
 ## Repetitive or One-Off Tasks
 
@@ -122,7 +120,7 @@ fn code_under_test_does_X_when_Y() {
 }
 ```
 
-The repetitive nature of unit tests and clear test naming creates perfect conditions for GitHub Copilot to generate large portions of code. In terms of pure time saving, I found this to be the most helpful use of GitHub Copilot.
+The repetitive nature of unit tests and clear test naming creates perfect conditions for GitHub Copilot to generate large portions of code. In terms of pure time savings, I found this to be the most helpful use of GitHub Copilot.
 
 ### One-Off Tasks
 
