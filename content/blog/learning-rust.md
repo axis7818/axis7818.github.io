@@ -10,6 +10,8 @@ tags = ["Software", "Rust", "AI"]
 local_image = "img/unsplash/thomas-tastet-0eqgB57xMeA-unsplash.jpg"
 +++
 
+![computer screen with rust code](/img/unsplash/thomas-tastet-0eqgB57xMeA-unsplash.jpg)
+
 Lately, I have been feeling a particularly strong itch to learn a new technology and just build something. This feeling is nothing new to me, as making stuff is my primary motivator and I am drawn to new technologies like a moth to a flame. So, I did what I do best and decided to build an over-engineered tool to solve a minor problem: managing configuration and dotfiles on my development machines.
 
 Over the course of a day, I use 3 different computers. My work MacBook, my personal MacBook, and my Windows gaming PC. On each of these computers, I install and configure the same set of software (ex: git, zsh, tmux). In order to synchronize configuration across machines, I set up a [dotfiles repository](https://dotfiles.github.io).
