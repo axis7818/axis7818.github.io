@@ -217,7 +217,7 @@ enable_cards_tag_filtering = true
 invert_title_order = false
 
 # Full path after the base URL required. So if you were to place it in "static" it would be "/favicon.ico"
-# favicon = ""
+favicon = "/favicon.ico"
 
 # Add an emoji here to use it as favicon.
 # Compatibility: https://caniuse.com/link-icon-svg
@@ -230,11 +230,11 @@ invert_title_order = false
 # social_media_card = ""
 
 menu = [
-    { name = "about", url = "/blog/about-me", trailing_slash = true },
+    { name = "about", url = "/pages/about-me", trailing_slash = true },
     { name = "blog", url = "blog", trailing_slash = true },
     # { name = "archive", url = "archive", trailing_slash = true },
-    { name = "tags", url = "tags", trailing_slash = true },
     { name = "projects", url = "projects", trailing_slash = true },
+    { name = "tags", url = "tags", trailing_slash = true },
 ]
 
 # The RSS icon will be shown if (1) it's enabled and (2) the following variable is set to true.
@@ -271,7 +271,7 @@ socials = [
 
 # Extra menu to show on the footer, below socials section.
 footer_menu = [
-    {url = "/blog/about-me", name = "about", trailing_slash = true},
+    {url = "/pages/about-me", name = "about", trailing_slash = true},
     # {url = "privacy", name = "privacy", trailing_slash = true},
     {url = "sitemap.xml", name = "sitemap", trailing_slash = false},
     # {url = "https://example.com", name = "external link", trailing_slash = true},

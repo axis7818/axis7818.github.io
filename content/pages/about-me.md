@@ -1,12 +1,13 @@
 +++
 title = "Who is Cameron?"
-date = "2025-01-25"
 description = "A little bit about myself"
+
+template = "info-page.html"
 +++
 
-# I am a Software Engineer
+![cameron in zion](/img/cameron-zion.png)
 
-![mouse and keyboard on a desk](/img/keyboard.png)
+# I am a Software Engineer
 
 I am a Software Engineer who is driven by a passion for learning and applying new technologies in innovative ways. Through my work, I strive to build clear and simple solutions to challenging problems in cloud computing, systems programming, and computer graphics. I have designed and built software systems that provide value for organizations ranging from small start-up teams to some of the world’s largest enterprise businesses.
 
@@ -22,8 +23,8 @@ While in school, I was fortunate enough to be part of the [Worldspinner](https:/
 
 # And Some Personal Stuff
 
-![cameron in zion](/img/cameron-zion.png)
-
 I am fortunate enough to work a fully-remote job in Sonoma County, CA where I was born and raised. I live with my dog, Hughie, and enjoy travel when my job and life allows.
 
 My hobby is collecting hobbies. In my free time, I enjoy hiking, reading, gaming, cooking, skiing, speed cubing, building keyboards, and music.
+
+![mouse and keyboard on a desk](/img/keyboard.png)

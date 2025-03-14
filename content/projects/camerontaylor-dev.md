@@ -1,11 +1,11 @@
 +++
 title = "camerontaylor.dev"
-description = "My personal website that you are currently looking at."
-weight = 1
+description = "My personal website that you are currently looking at"
+weight = 10
 template = "page.html"
 
 [taxonomies]
-tags = ["software"]
+tags = ["Software"]
 
 [extra]
 local_image = "img/profile.png"
