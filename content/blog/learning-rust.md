@@ -10,21 +10,15 @@ tags = ["Software", "Rust", "AI"]
 local_image = "img/unsplash/thomas-tastet-0eqgB57xMeA-unsplash.jpg"
 +++
 
-Recently, I learned [Rust](https://www.rust-lang.org/) to build [dotpatina](https://github.com/axis7818/dotpatina). And along the way, I tried some AI tools too.
+Lately, I have been feeling a particularly strong itch to learn a new technology and just build something. This feeling is nothing new to me, as making stuff is my primary motivator and I am drawn to new technologies like a moth to a flame. So, I did what I do best and decided to build an over-engineered tool to solve a minor problem: managing configuration and dotfiles on my development machines.
 
-# A Software Engineer's Urge to Reinvent the Wheel
+Over the course of a day, I use 3 different computers. My work MacBook, my personal MacBook, and my Windows gaming PC. On each of these computers, I install and configure the same set of software (ex: git, zsh, tmux). In order to synchronize configuration across machines, I set up a [dotfiles repository](https://dotfiles.github.io).
 
-Lately, I have been feeling a particularly strong itch to learn a new technology and just build something. This feeling is nothing new to me, as I always have a desire to expand my software engineering toolbox and I am drawn to new technologies like a moth to a flame. So, I did what I do best and decided to build an over-engineered tool to solve a minor problem: managing system configuration and dotfiles.
-
-Over the course of a day, I use 3 different computers. My work MacBook, my personal MacBook, and my Windows gaming PC. On each of these computers, I install and configure the same set of software (ex: git, zsh, tmux). In order to synchronize configuration across machines, I set up a [dotfiles repository](https://github.com/axis7818/dotfiles).
-
-> TODO: image of 3 computers & dotfiles repository
-
-{{ admonition(type="info", text="See [dotfiles.github.io](https://dotfiles.github.io) for more information on dotfiles repositories.") }}
-
-With my dotfiles repository cloned onto each of my computers, the problem becomes copying files to their expected filesystem location for the respective tools to use. This can be managed via scripts, but these scripts get tricky when files need to be slightly different for each machine. For example, on my work laptop, I want my gitconfig email address to be my work address rather than my personal one.
+With [my dotfiles repository](https://github.com/axis7818/dotfiles) cloned onto each of my computers, the problem became copying files to their expected filesystem location for the respective tools to use. This can be managed via scripts, but these scripts get tricky when files need to be slightly different for each machine. For example, on my work laptop, I want my gitconfig email address to be my work address rather than my personal one.
 
 I used this problem as an excuse to learn [Rust](https://www.rust-lang.org/) and build a CLI utility, [dotpatina](https://github.com/axis7818/dotpatina). Dotpatina allows me to [declaratively manage](https://github.com/axis7818/dotpatina?tab=readme-ov-file#patina-file) dotfiles using [handlebars templating](https://handlebarsjs.com/guide/) and renders [diff visualizations](https://github.com/axis7818/dotpatina?tab=readme-ov-file#applying-a-patina) to make it clear what files need to change when I update my dotfiles repository.
+
+Here is an example of it in action:
 
 ![patina apply gif](/img/dotpatina/update-patina.gif)
 
@@ -34,7 +28,7 @@ I chose Rust primarily because I have never used it before. And, its [performanc
 
 My objective was to build a "production ready" (in quotes because I have no expectations that anyone other than me will use dotpatina) tool from the ground up using a new language and toolchain. I just wanted to be a beginner again, and Rust's famously steep learning curve seemed like the perfect choice.
 
-> TODO: image of Rust learning curve
+![Rust learning curve](/img/dotpatina/rust_learning_curve.png)
 
 And indeed it was.
 
@@ -48,38 +42,92 @@ Before really building anything, I started with the general Rust tutorials.
 
 These were good introductions and served to introduce me to [cargo](https://doc.rust-lang.org/cargo/guide/why-cargo-exists.html), Rust's toolchain, and concepts (like [borrowing](https://doc.rust-lang.org/rust-by-example/scope/borrow.html) and [lifetimes](https://doc.rust-lang.org/rust-by-example/scope/lifetime.html)).
 
-## Learning Rust with AI Assistance
+Compared to learning other programming languages, Rust has great resources for gaining hands-on practice right from the start. And, many of these resources guide you through error scenarios and how to fix them. Too often, introductory material will stop after the happy path where everything works as intended.
 
-AI is helpful as a tutor. Uses for AI when learning a language.
+# Learning Rust with AI Assistance
 
-- explaining errors
-- asking questions when you don't have the right vocabulary
+After learning the basics of Rust, but before diving into Rust development, I decided to make a conscious effort to use [GitHub Copilot](https://github.com/features/copilot) as an AI programming assistant. This was my first honest effort using these tools on a "real" project. So, I will summarize what I thought about GitHub Copilot with tooling that I am not an expert in.
 
-However, it is easy to unknowingly generate tech debt.
+## Explaining Errors
 
-It is important to study the generated code to understand what it does.
+By far, my favorite use of GitHub Copilot is to help explain an error. It doesn't take long after starting a Rust program until running into your first compiler error. And, a regular part of working with Rust is dealing with the borrow checker. Since there are whole classes of compile time errors that would be runtime errors in traditional languages, it is very easy to provide error information as context to GitHub Copilot.
 
-Automated testing is important for validating AI-generated code.
+Before too long, I found myself defaulting to GitHub Copilot to explain an error. Invoking the `/explain` quick action is just a keyboard shortcut away, and is much quicker than copying relevant error information, searching the web, and finding a relevant ([probably Stack Overflow](https://stackoverflow.com/questions/76758400/cannot-return-value-referencing-local-variable-data-owned-by-current-function)) link.
 
-# Development Environment
+![Explain using Copilot tooltip](/img/dotpatina/explain-using-copilot-1.png)
 
-## VSCode vs Rust Rover
+The GitHub Copilot chat view shows what portion of the code was referenced and explains a few potential solutions. In this case, returning values instead of references is the suggested solution.
 
-- best test running & exploring
-- best debugging
-- integrated tools
-  - documentation window
+![Explain using Copilot response](/img/dotpatina/explain-using-copilot-2.png)
 
-# Thoughts on Rust
+**Except... the code is already doing that. And cloning doesn't fix the error either.**
 
-## When it "Clicks", It Feels Great
+> TODO: center text ^
 
-## Consistent Ecosystem
+![Updated code with clone](/img/dotpatina/explain-using-copilot-3.png)
 
-## Modern but Hieroglyphic
+![Copilot's updated explanation](/img/dotpatina/explain-using-copilot-4.png)
 
-# Takeaways
+**So, why is this my favorite part of using GitHub Copilot?**
 
-1. It is satisfying to build something for the sake of learning (like making your own game engine)
-1. Rust is a great language
-1. Using AI as a beginner vs expert
+> TODO: center text ^
+
+Well, because it helped me explore the error **as it related to my code specifically**. GitHub Copilot generally accounts for specifics to my codebase that are provided via context. When simply searching for error help online, the search results are independent of the code subject to the error. It becomes the responsibility of the programmer to translate help to their codebase. GitHut Copilot helps with this translation.
+
+{{ admonition(type="note", icon="tip", text="The root cause of this issue turned out to be a self-referential data structure and building the returned object, `Ok((patina, render))`.") }}
+
+In other instances of explaining and fixing errors, GitHub Copilot would provide solutions that technically worked. These **technically correct** solutions fell into 3 buckets (in order of frequency):
+
+1. Solutions that were the "best" for the job. At least to my knowledge.
+2. Solutions that were not the "best", and I had to continue iterating before settling on a final implementation.
+3. Solutions that were the "best" because they were **better** than my initial intentions.
+
+This experience did not completely replace [RTFM](https://en.wikipedia.org/wiki/RTFM) or web search. The challenge seems to be identifying an providing the proper context to GitHub Copilot to generate a helpful response. But, it has become my first line of defense against the red squiggly lines in my IDE.
+
+> TODO: red squiggly styling ^
+
+## Repetitive or One-Off Tasks
+
+When it comes to actually generating code, I found GitHub Copilot to be particularly helpful in 2 places: very repetitive code and one-off tasks that might be done once per project.
+
+### Repetitive Code
+
+When developing software, I will almost religiously enforce [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) principals. The one constant exception to this is when writing unit tests. This allows unit tests to serve as self-contained examples as well. And, debugging tests is easier without the extra layers of abstraction that reduce repeated code.
+
+In addition to the repetitive nature, unit tests often have an explicit naming pattern. For example, test names might follow the template:
+
+```rust
+#[test]
+fn code_under_test_does_X_when_Y() {
+  // Arrange
+  // ... set up conditions for "Y"
+
+  // Act
+  // ... invoke "code_under_test"
+
+  // Assert
+  // ... validate "X" happened
+}
+```
+
+The repetitive nature of unit tests and clear test naming creates perfect conditions for GitHub Copilot to generate large portions of code. In terms of pure time saving, I found this to be the most helpful use of GitHub Copilot.
+
+### One-Off Tasks
+
+On the other end of the spectrum are one-off tasks. These are the tasks that happen infrequently enough that it is hard to become an "expert" in the syntax.
+
+When building Dotpatina, I created GitHub Actions workflows for continuous integration and continuous deployment. This is a one-time set up task and requires specific yaml syntax.
+
+A quick comment, and GitHub Copilot suggests the proper yaml for triggering a workflow under the desired conditions.
+
+![GitHub Actions autocomplete](/img/dotpatina/gh-actions.png)
+
+# My Concerns with AI Pair Programming
+
+Generative AI and AI Pair Programming is here to stay, and I believe Software Engineers will need to make use of this technology (where it provides real benefit) in order to stay relevant in the job market.However, I do have some concerns with generative AI's impact on the industry.
+
+I worry about its ability to generate hidden **technical debt**, especially when code is not thoroughly reviewed by an expert. Even if code functions perfectly. Inefficient code is harder to maintain and makes less code less [green](https://www.green-coding.io/).
+
+I worry about the **accessibility** of programming. Learning to code had been very accessible to people, only requiring a computer and an internet connection. While there are cheaper AI pair programmers and GitHub Copilot has a free tier, it is still expensive to get "quality and quantity" use out of AI pair programmers.
+
+And, I worry that the **craftsmanship** of computer programming will lose value. Although admittedly, this one makes me sound like a horse in the age of the automobile.
