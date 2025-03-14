@@ -44,6 +44,22 @@ These were good introductions and served to introduce me to [cargo](https://doc.
 
 Compared to learning other programming languages, Rust has great resources for gaining hands-on practice right from the start. And, many of these resources guide you through error scenarios and how to fix them. Too often, introductory material will stop after the happy path where everything works as intended.
 
+## The Rust Software Development Lifecycle
+
+With Dotpatina, I didn't just want to write the Rust code for a CLI. I wanted to write tests, publish it to a public place, and include documentation.
+
+I used Rust and cargo for running tests and formatting. This was one of my favorite parts of the Rust language because of how consistent the tooling is across cargo crates.
+
+The [dotpatina create is published to crates.io](https://crates.io/crates/dotpatina) automatically when changes are [pushed to main](https://github.com/axis7818/dotpatina/actions/workflows/continuous-deployment.yaml).
+
+[docs.rs](https://docs.rs/crate/dotpatina/latest) hosts documentation for any crates published to crates.io. But, I also included [documentation hosting with GitHub pages](https://camerontaylor.dev/dotpatina/dotpatina/index.html).
+
+### VSCode vs Rust Rover
+
+While building dotpatina, I also tested two development environments: [VSCode](https://code.visualstudio.com/) with the [rust-analyzer extension](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) and [RustRover by Jetbrains](https://www.jetbrains.com/rust/).
+
+Generally, I found Rust Rover to be the better experience for working directly with Rust code. It is easier to run Rust tests, cargo commands, and viewing Rust library documentation. However, the GitHub Copilot experience (details below) was better in VSCode.
+
 # Learning Rust with AI Assistance
 
 After learning the basics of Rust, but before diving into Rust development, I decided to make a conscious effort to use [GitHub Copilot](https://github.com/features/copilot) as an AI programming assistant. This was my first honest effort using these tools on a "real" project. So, I will summarize what I thought about GitHub Copilot with tooling that I am not an expert in.
@@ -62,15 +78,11 @@ The GitHub Copilot chat view shows what portion of the code was referenced and e
 
 **Except... the code is already doing that. And cloning doesn't fix the error either.**
 
-> TODO: center text ^
-
 ![Updated code with clone](/img/dotpatina/explain-using-copilot-3.png)
 
 ![Copilot's updated explanation](/img/dotpatina/explain-using-copilot-4.png)
 
 **So, why is this my favorite part of using GitHub Copilot?**
-
-> TODO: center text ^
 
 Well, because it helped me explore the error **as it related to my code specifically**. GitHub Copilot generally accounts for specifics to my codebase that are provided via context. When simply searching for error help online, the search results are independent of the code subject to the error. It becomes the responsibility of the programmer to translate help to their codebase. GitHut Copilot helps with this translation.
 
@@ -82,9 +94,7 @@ In other instances of explaining and fixing errors, GitHub Copilot would provide
 2. Solutions that were not the "best", and I had to continue iterating before settling on a final implementation.
 3. Solutions that were the "best" because they were **better** than my initial intentions.
 
-This experience did not completely replace [RTFM](https://en.wikipedia.org/wiki/RTFM) or web search. The challenge seems to be identifying an providing the proper context to GitHub Copilot to generate a helpful response. But, it has become my first line of defense against the red squiggly lines in my IDE.
-
-> TODO: red squiggly styling ^
+This experience did not completely replace [RTFM](https://en.wikipedia.org/wiki/RTFM) or web search. The challenge seems to be identifying an providing the proper context to GitHub Copilot to generate a helpful response. But, it has become my first line of defense against the <u class="red-squiggly">red underlines</u> in my IDE.
 
 ## Repetitive or One-Off Tasks
 
@@ -122,7 +132,7 @@ A quick comment, and GitHub Copilot suggests the proper yaml for triggering a wo
 
 ![GitHub Actions autocomplete](/img/dotpatina/gh-actions.png)
 
-# My Concerns with AI Pair Programming
+## My Concerns with AI Pair Programming
 
 Generative AI and AI Pair Programming is here to stay, and I believe Software Engineers will need to make use of this technology (where it provides real benefit) in order to stay relevant in the job market.However, I do have some concerns with generative AI's impact on the industry.
 
@@ -131,3 +141,9 @@ I worry about its ability to generate hidden **technical debt**, especially when
 I worry about the **accessibility** of programming. Learning to code had been very accessible to people, only requiring a computer and an internet connection. While there are cheaper AI pair programmers and GitHub Copilot has a free tier, it is still expensive to get "quality and quantity" use out of AI pair programmers.
 
 And, I worry that the **craftsmanship** of computer programming will lose value. Although admittedly, this one makes me sound like a horse in the age of the automobile.
+
+# Takeaways
+
+Taking the time to learn a new programming language and complete a full end-to-end project was a fun exercise. Putting an intentional effort into using an AI pair programmer in this context let me evaluate GitHub Copilot as a tool without the pressures of deadlines or scrutiny of others. And, this has given me motivation for starting or completing other side-projects to satisfy my desire to build Software outside the context of my day job.
+
+Building on my new knowledge of Rust, I plan on exploring [game development with Bevy](https://bevyengine.org/) or [cross-platform app development with Tauri](https://v2.tauri.app/). I am also interested in evaluating [Continue](https://www.continue.dev/) with local [Ollama models](https://ollama.com/) as a more accessible AI pair programmer alternative.
