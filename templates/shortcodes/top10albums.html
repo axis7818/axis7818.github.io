@@ -2,6 +2,8 @@
 
 {% for album in data.albums %}
 
+{% if loop.index > 10 %}{% break %}{% endif %}
+
 <h1>{{loop.index}}. {{album.name}}</h1>
 <div class="top10album">
     <iframe
