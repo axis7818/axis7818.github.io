@@ -1,54 +1,51 @@
-# 1
+#
+# Top 10 Albums
+#
+
 [[albums]]
 name = "Metropolis, Pt. 2: Scenes from a Memory"
 spotifySrc = "https://open.spotify.com/embed/album/1QZi8laY96nhaeGSklvN4D"
 
-# 2
-[[albums]]
-name = "Remedy Lane"
-spotifySrc = "https://open.spotify.com/embed/album/5wdXBbdGH90qfKoWBErbdw"
-
-# 3
-[[albums]]
-name = "Soft Hell"
-spotifySrc = "https://open.spotify.com/embed/album/0ys96Qw1xkiT49nEFeaOBT"
-
-# 4
-[[albums]]
-name = "Maps of Non-Existent Places"
-spotifySrc = "https://open.spotify.com/embed/album/4NAHM8oVybVaSLphQX3L2u"
-
-# 5
-[[albums]]
-name = "Fear of a Blank Planet"
-spotifySrc = "https://open.spotify.com/embed/album/59J51uy6r6QcYe7cX0Fzz6"
-
-# 6
-[[albums]]
-name = "Stadium Arcadium"
-spotifySrc = "https://open.spotify.com/embed/album/7xl50xr9NDkd3i2kBbzsNZ"
-
-# 7
 [[albums]]
 name = "Blackwater Park"
 spotifySrc = "https://open.spotify.com/embed/album/7cMJfxkJwUAcxHCHQMNYYs"
 
-# 8
 [[albums]]
-name = "Language"
-spotifySrc = "https://open.spotify.com/embed/album/2w93WyKSLvPT2ywFLtfZHQ"
+name = "Maps of Non-Existent Places"
+spotifySrc = "https://open.spotify.com/embed/album/4NAHM8oVybVaSLphQX3L2u"
 
-# 9
+[[albums]]
+name = "Soft Hell"
+spotifySrc = "https://open.spotify.com/embed/album/0ys96Qw1xkiT49nEFeaOBT"
+
+[[albums]]
+name = "Remedy Lane"
+spotifySrc = "https://open.spotify.com/embed/album/5wdXBbdGH90qfKoWBErbdw"
+
+[[albums]]
+name = "Fear of a Blank Planet"
+spotifySrc = "https://open.spotify.com/embed/album/59J51uy6r6QcYe7cX0Fzz6"
+
+[[albums]]
+name = "Breakfast In America"
+spotifySrc = "https://open.spotify.com/embed/album/7i75GRwJbhDDiLi2uQHTtZ"
+
+[[albums]]
+name = "Stadium Arcadium"
+spotifySrc = "https://open.spotify.com/embed/album/7xl50xr9NDkd3i2kBbzsNZ"
+
 [[albums]]
 name = "Lateralus"
 spotifySrc = "https://open.spotify.com/embed/album/5l5m1hnH4punS1GQXgEi3T"
 
-# 10
 [[albums]]
 name = "The Mountain"
 spotifySrc = "https://open.spotify.com/embed/album/3RBULTZJ97bvVzZLpxcB0j"
 
-# Others
+#
+# Others Notable Albums
+#
+
 [[albums]]
-name = "Breakfast In America"
-spotifySrc = "https://open.spotify.com/embed/album/7i75GRwJbhDDiLi2uQHTtZ"
+name = "Language"
+spotifySrc = "https://open.spotify.com/embed/album/2w93WyKSLvPT2ywFLtfZHQ"

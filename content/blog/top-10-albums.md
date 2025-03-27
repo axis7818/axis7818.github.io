@@ -1,7 +1,7 @@
 +++
 title = "Top 10 Albums of All Time"
 date = "2025-03-26"
-description = 'After years of searching, I have finally found the objective & undisputable list of the 10 best albums ever made.'
+description = 'After years of searching, I have finally found the objective & undisputed list of the 10 best albums ever made.'
 
 [taxonomies]
 tags = ["Music"]
@@ -12,7 +12,9 @@ local_image = "img/finally-10-albums.jpg"
 
 ![finally, the 10 best albums](/img/finally-10-albums.jpg)
 
-After years of searching, I have finally found the objective & undisputable list of the 10 best albums ever made {{ spoiler(text="according to me") }}.
+After years of searching, I have finally found the objective & undisputed list of the 10 best albums ever made {{ spoiler(text="according to me") }}.
+
+Listen to them all back-to-back in the [Top 10 Albums of All Time](https://open.spotify.com/playlist/07JRBdNwXCANN3CZB8LHyD) Spotify playlist. It'll only take 12 hours and 6 minutes.
 
 ---
 
