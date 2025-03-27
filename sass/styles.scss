@@ -1,0 +1,17 @@
+.red-squiggly {
+    -webkit-text-decoration-style: wavy;
+    -moz-text-decoration-style: wavy;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+}
+
+.unsplashimg {
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+
+    img {
+        max-width: 50%;
+        height: auto;
+    }
+}
