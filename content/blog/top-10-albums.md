@@ -8,6 +8,7 @@ tags = ["Music"]
 
 [extra]
 local_image = "img/finally-10-albums.jpg"
+giscus = false
 +++
 
 ![finally, the 10 best albums](/img/finally-10-albums.jpg)
