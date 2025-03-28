@@ -10,7 +10,13 @@ tags = ["Software", "Rust", "AI"]
 local_image = "img/unsplash/thomas-tastet-0eqgB57xMeA-unsplash.jpg"
 +++
 
-![computer screen with rust code](/img/unsplash/thomas-tastet-0eqgB57xMeA-unsplash.jpg)
+{{ unsplashimg(
+  src="/img/unsplash/thomas-tastet-0eqgB57xMeA-unsplash.jpg",
+  alt="computer screen with rust code"
+  author="Thomas Tastet"
+  authorLink="https://unsplash.com/@thomastastet?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+  unsplashLink="https://unsplash.com/photos/a-screenshot-of-a-computer-0eqgB57xMeA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+)}}
 
 Lately, I have been feeling a particularly strong itch to learn a new technology and just build something. This feeling is nothing new to me, as making stuff is my primary motivator and I am drawn to new technologies like a moth to a flame. So, I did what I do best and decided to build an over-engineered tool to solve a minor problem: managing configuration and dotfiles on my development machines.
 

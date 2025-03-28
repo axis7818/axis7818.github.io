@@ -320,6 +320,7 @@ allowed_domains = [
     { directive = "frame-src", domains = [
         "player.vimeo.com",
         "https://www.youtube-nocookie.com",
+        "https://open.spotify.com",
     ] },
 ]
 
