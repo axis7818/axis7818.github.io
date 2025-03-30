@@ -366,8 +366,8 @@ mapping = "slug"                     # Available: pathname; url; title; slug. "s
 strict_title_matching = 1            # 1 to enable, 0 to disable. https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#data-strict
 enable_reactions = 1                 # 1 to enable, 0 to disable.
 comment_box_above_comments = false
-light_theme = "noborder_light"
-dark_theme = "noborder_dark"
+light_theme = "catppuccin_latte"
+dark_theme = "catppuccin_frappe"
 lang = ""                            # Leave blank to match the page's language.
 lazy_loading = true
 
