@@ -1,11 +1,37 @@
 // This defines theme-specific variables.
 @mixin theme-variables($theme) {
     @if $theme == "light" {
-        // Light theme colours.
-        --primary-color: #08964f; // Contrast ratio: 4.73:1
+        // Catppuccin Latte theme
+        // https://catppuccin.com/palette/
+        --background-color: #eff1f5; // base
+        --bg-0: #eff1f5; // base
+        --bg-1: #ccd0da; // surface 0
+        --bg-2: #bcc0cc; // surface 1
+        --bg-3: #acb0be; // surface 2
+        --hover-color: #e6e9ef; // mantle
+        --primary-color: #40a02b; // green
+        --divider-color: #7c7f93; // overlay 2
+        --text-color: #4c4f69; // text
+        --text-color-high-contrast: #5c5f77; // subtext 1
+        --meta-color: #40a02b; // green
+        --codeblock-bg: #dce0e8; // crust
+        --codeblock-highlight: #179299; // teal
     } @else if $theme == "dark" {
-        // Dark theme colours.
-        --primary-color: #91eeab; // Contrast ratio: 11.06:1
+        // Catppuccin Frappe theme
+        // https://catppuccin.com/palette/
+        --background-color: #303446; // base
+        --bg-0: #303446; // base
+        --bg-1: #414559; // surface 0
+        --bg-2: #51576d; // surface 1
+        --bg-3: #626880; // surface 2
+        --hover-color: #292c3c; // mantle
+        --primary-color: #a6d189; // green
+        --divider-color: #949cbb; // overlay 2
+        --text-color: #c6d0f5; // text
+        --text-color-high-contrast: #b5bfe2; // subtext 1
+        --meta-color: #a6d189; // green
+        --codeblock-bg: #232634; // crust
+        --codeblock-highlight: #81c8be; // teal
     }
 }
 
