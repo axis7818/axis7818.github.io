@@ -8,6 +8,7 @@ tags = ["Software", "Rust", "AI"]
 
 [extra]
 local_image = "img/unsplash/thomas-tastet-0eqgB57xMeA-unsplash.jpg"
+stylesheets = ["styles/blog/learning-rust.css"]
 +++
 
 {{ unsplashimg(
