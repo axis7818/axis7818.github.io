@@ -1,6 +1,6 @@
 # [~/camerontaylor.dev](https://camerontaylor.dev/projects/camerontaylor-dev/)
 
-## Hi, I'm Cameron! 👋
+## hi, i'm cameron! 👋
 
 This is the GitHub repository for my personal website.
 

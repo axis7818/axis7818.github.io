@@ -230,11 +230,11 @@ favicon = "/favicon.ico"
 # social_media_card = ""
 
 menu = [
-    { name = "about", url = "/pages/about-me", trailing_slash = true },
-    { name = "blog", url = "blog", trailing_slash = true },
+    { name = "About", url = "/pages/about-me", trailing_slash = true },
+    { name = "Blog", url = "blog", trailing_slash = true },
     # { name = "archive", url = "archive", trailing_slash = true },
-    { name = "projects", url = "projects", trailing_slash = true },
-    { name = "tags", url = "tags", trailing_slash = true },
+    { name = "Projects", url = "projects", trailing_slash = true },
+    { name = "Tags", url = "tags", trailing_slash = true },
 ]
 
 # The RSS icon will be shown if (1) it's enabled and (2) the following variable is set to true.
