@@ -218,8 +218,8 @@ invert_title_order = false
 
 # Full path after the base URL required. So if you were to place it in "static" it would be "/favicon.ico"
 # favicon = "/favicon.ico"
-light_favicon = "/favicon-light.ico"
-dark_favicon = "/favicon-dark.ico"
+light_favicon = "/favicon-light.png"
+dark_favicon = "/favicon-dark.png"
 
 # Add an emoji here to use it as favicon.
 # Compatibility: https://caniuse.com/link-icon-svg
