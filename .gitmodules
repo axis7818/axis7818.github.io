@@ -1,0 +1,4 @@
+[submodule "themes/tabi"]
+	path = themes/tabi
+	url = git@github.com:axis7818/tabi.git
+	branch = light-dark-favicon
