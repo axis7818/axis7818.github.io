@@ -7,6 +7,7 @@ description = "This post explains the challenge of fleet configuration managemen
 tags = ["Microsoft ISE", "Software", "DevOps", "Kubernetes"]
 
 [extra]
+toc = true
 local_image = "img/fleet-configuration-management/configuration-management-system.png"
 +++
 
@@ -111,7 +112,7 @@ The **Platform Engineer** owns and manages the Kalypso Fleet Configuration Manag
 
 ![architecture diagram](/img/fleet-configuration-management/fleet-management.png)
 
-## Dataflow
+## System Workflow
 
 1. Application Engineers author changes to their workloads independently via git contributions.
 2. Continuous Integration flows run independently in response to changes to workload source code.
@@ -123,6 +124,10 @@ The **Platform Engineer** owns and manages the Kalypso Fleet Configuration Manag
 8. Flux agents interact with their respective Kubernetes API servers to ensure that resources are provisioned in the fleet.
 9. The Observability Hub running inside the management cluster monitors deployment state for all workloads across the fleet. This information is surfaced in Grafana dashboards.
 10. Engineers monitor workload deployments across the fleet using deployment observability dashboards.
+
+## Kalypso Runbooks
+
+To learn more about how Application Engineers and Platform Engineers use this system, see the [Kalypso Runbooks](https://github.com/microsoft/kalypso/tree/main/docs/run-books) in Kalypso's documentation. These runbooks provide step-by-step instructions on the common Kalypso use cases and include examples for each scenario.
 
 # Conclusion
 
