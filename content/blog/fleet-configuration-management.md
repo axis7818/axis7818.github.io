@@ -4,7 +4,7 @@ date = "2025-04-07"
 description = "This post explains the challenge of fleet configuration management, the role of an automated fleet configuration management system, and describes key considerations for building such a system."
 
 [taxonomies]
-tags = ["Microsoft ISE", "Software", "DevOps", "Kubernetes"]
+tags = ["Microsoft ISE", "Software", "DevOps", "CI/CD", "Kubernetes"]
 
 [extra]
 toc = true
