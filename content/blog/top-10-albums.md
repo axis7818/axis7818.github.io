@@ -1,7 +1,7 @@
 +++
 title = "Top 10 Albums of All Time"
 date = "2025-03-27"
-description = 'After years of searching, I have finally found the objective & undisputed list of the 10 best albums ever made.'
+description = 'After years of searching, I have finally found the objective & undisputed list of the 10 best albums ever made'
 
 [taxonomies]
 tags = ["Music"]
