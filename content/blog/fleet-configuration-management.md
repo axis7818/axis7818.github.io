@@ -15,7 +15,7 @@ local_image = "img/fleet-configuration-management/configuration-management-syste
 
 Recently, my team at Microsoft completed a customer engagement that involved managing edge deployments onto factory floors across geographical locations. This system needed to support existing workloads migrated from Azure IoT Hub, new workloads for processing IoT data feeds, and machine learning workloads for performing inference to ship intelligence to the edge.
 
-During this engagement, we built a system to handle this complexity using [Microsoft Kalypso](https://github.com/microsoft/kalypso) to orchestrate GitOps deployments across a fleet of [arc-enabled Kubernetes clusters](https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/overview) hosting [Azure IoT Operations](https://learn.microsoft.com/en-us/azure/iot-operations/overview-iot-operations) to support cloud connectivity and IoT device telemetry.
+During this engagement, we built a system to handle this complexity using [Kalypso](https://github.com/microsoft/kalypso) to orchestrate GitOps deployments across a fleet of [arc-enabled Kubernetes clusters](https://learn.microsoft.com/en-us/azure/azure-arc/kubernetes/overview) hosting [Azure IoT Operations](https://learn.microsoft.com/en-us/azure/iot-operations/overview-iot-operations) to support cloud connectivity and IoT device telemetry.
 
 This post explains the challenge of fleet configuration management, the role of an automated fleet configuration management system, and describes key considerations for building such a system.
 
@@ -29,7 +29,7 @@ There are a few options for implementing a fleet configuration management system
 
 - [Azure Kubernetes Fleet Manager](https://learn.microsoft.com/en-us/azure/kubernetes-fleet/overview): This is a good choice for cloud-hosted AKS workloads and provides features for orchestrating Kubernetes cluster operations such as cluster version upgrades. A "Hub Cluster" hosts a Kubernetes controller that reconciles all of the workloads running on member clusters.
 - [Rancher Fleet](https://fleet.rancher.io/): This is a good choice if you are using Rancher to manage your Kubernetes clusters. It is [open source](https://github.com/rancher/fleet) and uses a Fleet Agent to manage individual workloads on clusters within the fleet. A "Fleet Controller Cluster" hosts a Kubernetes controller and is monitored by all of the individual fleet clusters.
-- [Microsoft Kalypso](https://github.com/microsoft/kalypso): This is a good choice for full flexibility as it is compatible with edge or cloud-hosted clusters and works with any GitOps agents (Flux, ArgoCD, etc.). The Kalypso scheduler runs on a designated Kubernetes cluster and orchestrates pull requests to GitOps repositories that are monitored by separate GitOps clusters. See [Example Architecture With Microsoft Kalypso](#example-architecture-with-microsoft-kalypso) below for an example architecture using Kalypso.
+- [Kalypso](https://github.com/microsoft/kalypso): This is a good choice for full flexibility as it is compatible with edge or cloud-hosted clusters and works with any GitOps agents (Flux, ArgoCD, etc.). The Kalypso scheduler runs on a designated Kubernetes cluster and orchestrates pull requests to GitOps repositories that are monitored by separate GitOps clusters. See [Example Architecture With Kalypso](#example-architecture-with-kalypso) below for an example architecture using Kalypso.
 
 ## Definitions
 
@@ -93,7 +93,7 @@ This allows engineering and operations teams to easily scale the number of workl
 
 Registering workloads and clusters with a fleet configuration management system requires managing higher-level deployment abstractions and managing a system that operates on these abstractions to automate configuration delivery. This adds complexity to the system and requires additional operational overhead. It is important to weigh this cost against the cost of manually curating workload configurations in your system.
 
-# Example Architecture With Microsoft Kalypso
+# Example Architecture With Kalypso
 
 This is an example architecture that generalizes the architecture that we built in our recent customer engagement. For more details on getting started with Kalypso, see its [GitHub repositories](https://github.com/microsoft/kalypso?tab=readme-ov-file#referenced-repositories) and the following Microsoft Learn pages:
 
