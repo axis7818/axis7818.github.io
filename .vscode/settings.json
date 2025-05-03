@@ -1,9 +1,30 @@
 {
     "cSpell.words": [
         "camerontaylor",
+        "catppuccin",
         "codeium",
         "dotpatina",
         "Kickstarter",
         "portraitworks"
-    ]
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#e6ada0",
+        "activityBar.background": "#e6ada0",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#217e32",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#e6ada0",
+        "statusBar.background": "#dc8a78",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#d1674f",
+        "statusBarItem.remoteBackground": "#dc8a78",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#dc8a78",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#dc8a7899",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#dc8a78"
 }
