@@ -72,7 +72,10 @@ skin = "axis7818"
 # Note: Bright colors may be ignored in dark mode.
 # More details: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color
 # browser_theme_color = "#087e96"  # Example of single value.
-browser_theme_color = ["#08964f", "#91eeab"] # Example of light/dark colours.
+# browser_theme_color = [
+#     "#dc8a78",
+#     "#a6d189"
+# ]
 
 # List additional stylesheets to load site-wide.
 # These stylesheets should be located in your site's `static` directory.
