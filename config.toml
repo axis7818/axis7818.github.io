@@ -222,10 +222,6 @@ invert_title_order = false
 # Full path after the base URL required. So if you were to place it in "static" it would be "/favicon.ico"
 favicon = "/favicon-light.png"
 
-# Optionally extend the header by supplying an `extra-header.html` template
-extend_header = true
-extend_body = true
-
 # Add an emoji here to use it as favicon.
 # Compatibility: https://caniuse.com/link-icon-svg
 # favicon_emoji = ""
