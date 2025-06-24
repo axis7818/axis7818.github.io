@@ -8,13 +8,13 @@ template = "page.html"
 tags = ["Software"]
 
 [extra]
-local_image = "img/profile.png"
+local_image = "img/profile.jpg"
 +++
 
 
 # [Hi, I'm Cameron! 👋](/)
 
-![profile picture](/img/profile.png)
+![profile picture](/img/profile.jpg)
 
 This is my personal website! It is getting an overhaul in 2025.
 

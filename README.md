@@ -5,7 +5,7 @@
 This is the GitHub repository for my personal website.
 
 <p align="center">
-    <img alt="profile picture" src="https://camerontaylor.dev/img/profile.png" style="max-width: 256px" />
+    <img alt="profile picture" src="https://camerontaylor.dev/img/profile.jpg" style="max-width: 256px" />
 </p>
 
 ## Development
