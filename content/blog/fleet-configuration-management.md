@@ -11,6 +11,8 @@ toc = true
 local_image = "img/fleet-configuration-management/configuration-management-system.png"
 +++
 
+This blog is also publised on the [Microsoft ISE Developer Blog](https://devblogs.microsoft.com/ise/fleet-configuration-management/).
+
 # Introduction
 
 Recently, my team at Microsoft completed a customer engagement that involved managing edge deployments onto factory floors across geographical locations. This system needed to support existing workloads migrated from Azure IoT Hub, new workloads for processing IoT data feeds, and machine learning workloads for performing inference to ship intelligence to the edge.
