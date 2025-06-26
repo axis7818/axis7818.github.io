@@ -11,7 +11,7 @@ toc = true
 local_image = "img/fleet-configuration-management/configuration-management-system.png"
 +++
 
-This blog is also publised on the [Microsoft ISE Developer Blog](https://devblogs.microsoft.com/ise/fleet-configuration-management/).
+This post is also publised to the [Microsoft ISE Developer Blog](https://devblogs.microsoft.com/ise/fleet-configuration-management/).
 
 # Introduction
 
@@ -140,3 +140,7 @@ Fleet configuration management is a powerful tool for scaling configuration mana
 Thank you to the rest of the ISE dev crew who helped with the customer engagement that inspired this post [Bindu Chinnasamy](https://www.linkedin.com/in/bindu-msft-cse/), [John Hauppa](https://www.linkedin.com/in/johnhauppa/), [Uffaz Nathaniel](https://www.linkedin.com/in/uffaz-nathaniel-85588935/), [Bryan Leighton](https://www.linkedin.com/in/bryan77/), [Laura Lund](https://www.linkedin.com/in/lundlaura/), and [Kanishk Tantia](https://www.linkedin.com/in/kanishk-t-1723b2107/).
 
 And a special thank you to [Eugene Fedorenko](https://www.linkedin.com/in/eugene-fedorenko-661a2636/) for his expertise and guidance on using Kalypso.
+
+## ISE Developer Blog
+
+This post is also publised to the [Microsoft ISE Developer Blog](https://devblogs.microsoft.com/ise/fleet-configuration-management/).
