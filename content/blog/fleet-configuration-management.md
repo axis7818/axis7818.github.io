@@ -11,6 +11,8 @@ toc = true
 local_image = "img/fleet-configuration-management/configuration-management-system.png"
 +++
 
+This post is also publised to the [Microsoft ISE Developer Blog](https://devblogs.microsoft.com/ise/fleet-configuration-management/).
+
 # Introduction
 
 Recently, my team at Microsoft completed a customer engagement that involved managing edge deployments onto factory floors across geographical locations. This system needed to support existing workloads migrated from Azure IoT Hub, new workloads for processing IoT data feeds, and machine learning workloads for performing inference to ship intelligence to the edge.
@@ -138,3 +140,7 @@ Fleet configuration management is a powerful tool for scaling configuration mana
 Thank you to the rest of the ISE dev crew who helped with the customer engagement that inspired this post [Bindu Chinnasamy](https://www.linkedin.com/in/bindu-msft-cse/), [John Hauppa](https://www.linkedin.com/in/johnhauppa/), [Uffaz Nathaniel](https://www.linkedin.com/in/uffaz-nathaniel-85588935/), [Bryan Leighton](https://www.linkedin.com/in/bryan77/), [Laura Lund](https://www.linkedin.com/in/lundlaura/), and [Kanishk Tantia](https://www.linkedin.com/in/kanishk-t-1723b2107/).
 
 And a special thank you to [Eugene Fedorenko](https://www.linkedin.com/in/eugene-fedorenko-661a2636/) for his expertise and guidance on using Kalypso.
+
+## ISE Developer Blog
+
+This post is also publised to the [Microsoft ISE Developer Blog](https://devblogs.microsoft.com/ise/fleet-configuration-management/).
