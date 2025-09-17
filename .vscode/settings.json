@@ -7,12 +7,4 @@
         "Kickstarter",
         "portraitworks"
     ],
-    "workbench.colorCustomizations": {
-        "commandCenter.border": "#e7e7e799",
-        "titleBar.activeBackground": "#40a02b",
-        "titleBar.activeForeground": "#e7e7e7",
-        "titleBar.inactiveBackground": "#40a02b99",
-        "titleBar.inactiveForeground": "#e7e7e799"
-    },
-    "peacock.color": "#40a02b"
 }
