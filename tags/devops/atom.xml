@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://camerontaylor.dev/feed_style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <tabi:metadata xmlns:tabi="https://github.com/welpo/tabi">
+        <tabi:base_url>https:&#x2F;&#x2F;camerontaylor.dev&#x2F;</tabi:base_url>
+        <tabi:separator>
+            •
+        </tabi:separator>
+        <tabi:about_feeds>This is a web feed, also known as an Atom feed. Subscribe by copying the URL from the address bar into your newsreader. Visit About Feeds to learn more and get started. It&#x27;s free.</tabi:about_feeds>
+        <tabi:visit_the_site>Visit website</tabi:visit_the_site>
+        <tabi:recent_posts>Recent posts</tabi:recent_posts>
+        <tabi:last_updated_on>Updated on $DATE</tabi:last_updated_on>
+        <tabi:default_theme></tabi:default_theme>
+        <tabi:post_listing_date>both</tabi:post_listing_date>
+        <tabi:current_section>DevOps</tabi:current_section>
+    </tabi:metadata><link rel="extra-stylesheet" href="https://camerontaylor.dev/skins/axis7818.css?h=cdb8697ca14ade6b2d00" /><title>~/camerontaylor.dev - DevOps</title>
+        <subtitle>A personal website for Cameron Taylor</subtitle>
+    <link href="https://camerontaylor.dev/tags/devops/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://camerontaylor.dev/tags/devops/" rel="alternate" type="text/html"/>
+    <generator uri="https://www.getzola.org/">Zola</generator><updated>2025-04-07T00:00:00+00:00</updated><id>https://camerontaylor.dev/tags/devops/atom.xml</id><entry xml:lang="en">
+        <title>Fleet Configuration Management</title>
+        <published>2025-04-07T00:00:00+00:00</published>
+        <updated>2025-04-07T00:00:00+00:00</updated>
+        <author>
+            <name>Cameron Taylor</name>
+        </author>
+        <link rel="alternate" href="https://camerontaylor.dev/blog/fleet-configuration-management/" type="text/html"/>
+        <id>https://camerontaylor.dev/blog/fleet-configuration-management/</id>
+        
+            <content type="html">&lt;p&gt;This post is also publised to the &lt;a href=&quot;https:&#x2F;&#x2F;devblogs.microsoft.com&#x2F;ise&#x2F;fleet-configuration-management&#x2F;&quot;&gt;Microsoft ISE Developer Blog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h1&gt;
+&lt;p&gt;Recently, my team at Microsoft completed a customer engagement that involved managing edge deployments onto factory floors across geographical locations. This system needed to support existing workloads migrated from Azure IoT Hub, new workloads for processing IoT data feeds, and machine learning workloads for performing inference to ship intelligence to the edge.&lt;&#x2F;p&gt;
+&lt;p&gt;During this engagement, we built a system to handle this complexity using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;kalypso&quot;&gt;Kalypso&lt;&#x2F;a&gt; to orchestrate GitOps deployments across a fleet of &lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;azure&#x2F;azure-arc&#x2F;kubernetes&#x2F;overview&quot;&gt;arc-enabled Kubernetes clusters&lt;&#x2F;a&gt; hosting &lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;azure&#x2F;iot-operations&#x2F;overview-iot-operations&quot;&gt;Azure IoT Operations&lt;&#x2F;a&gt; to support cloud connectivity and IoT device telemetry.&lt;&#x2F;p&gt;
+&lt;p&gt;This post explains the challenge of fleet configuration management, the role of an automated fleet configuration management system, and describes key considerations for building such a system.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-is-fleet-configuration-management&quot;&gt;What Is Fleet Configuration Management?&lt;&#x2F;h2&gt;
+&lt;p&gt;An automated fleet configuration management system is essential in a scenario where many workloads or applications need to be deployed and managed across a fleet of hosting platforms. This can be the case for cloud hosted platforms serving separate purposes, or edge hosted platforms where workloads need to be distributed across separate locations.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;example-fleet-configuration-management-systems&quot;&gt;Example Fleet Configuration Management Systems&lt;&#x2F;h2&gt;
+&lt;p&gt;There are a few options for implementing a fleet configuration management system. The one that works best for a given scenario will depend on details such as the hosting platforms that they support, licensing, and operational requirements. All of these options require managing a single separate Kubernetes cluster to run the automation work of the system.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;azure&#x2F;kubernetes-fleet&#x2F;overview&quot;&gt;Azure Kubernetes Fleet Manager&lt;&#x2F;a&gt;: This is a good choice for cloud-hosted AKS workloads and provides features for orchestrating Kubernetes cluster operations such as cluster version upgrades. A “Hub Cluster” hosts a Kubernetes controller that reconciles all of the workloads running on member clusters.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;fleet.rancher.io&#x2F;&quot;&gt;Rancher Fleet&lt;&#x2F;a&gt;: This is a good choice if you are using Rancher to manage your Kubernetes clusters. It is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rancher&#x2F;fleet&quot;&gt;open source&lt;&#x2F;a&gt; and uses a Fleet Agent to manage individual workloads on clusters within the fleet. A “Fleet Controller Cluster” hosts a Kubernetes controller and is monitored by all of the individual fleet clusters.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;kalypso&quot;&gt;Kalypso&lt;&#x2F;a&gt;: This is a good choice for full flexibility as it is compatible with edge or cloud-hosted clusters and works with any GitOps agents (Flux, ArgoCD, etc.). The Kalypso scheduler runs on a designated Kubernetes cluster and orchestrates pull requests to GitOps repositories that are monitored by separate GitOps clusters. See &lt;a href=&quot;https:&#x2F;&#x2F;camerontaylor.dev&#x2F;blog&#x2F;fleet-configuration-management&#x2F;#example-architecture-with-kalypso&quot;&gt;Example Architecture With Kalypso&lt;&#x2F;a&gt; below for an example architecture using Kalypso.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;definitions&quot;&gt;Definitions&lt;&#x2F;h2&gt;
+&lt;p&gt;Before getting into the details, lets first define terms as they appear in this post.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;fleet&lt;&#x2F;strong&gt; is a collection of hosting platforms that are managed together.&lt;&#x2F;li&gt;
+&lt;li&gt;A &lt;strong&gt;workload&lt;&#x2F;strong&gt; is a piece of software that is deployed as a unit onto the &lt;strong&gt;fleet&lt;&#x2F;strong&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Configuration&lt;&#x2F;strong&gt; represents a specific permutation of settings and specifications to make an instance of a &lt;strong&gt;workload&lt;&#x2F;strong&gt; run correctly in the &lt;strong&gt;fleet&lt;&#x2F;strong&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Generally, a &lt;strong&gt;fleet&lt;&#x2F;strong&gt; is composed of many hosting platforms, and there are many &lt;strong&gt;workloads&lt;&#x2F;strong&gt; that are deployed, each with a unique set of &lt;strong&gt;configuration&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The specific details will depend on what the hosting platform and workloads are, but for this post, we will use &lt;a href=&quot;https:&#x2F;&#x2F;kubernetes.io&#x2F;&quot;&gt;Kubernetes&lt;&#x2F;a&gt; clusters as the &lt;strong&gt;fleet&lt;&#x2F;strong&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;helm.sh&#x2F;&quot;&gt;Helm&lt;&#x2F;a&gt; charts as &lt;strong&gt;workloads&lt;&#x2F;strong&gt;, and rendered &lt;a href=&quot;https:&#x2F;&#x2F;kubernetes.io&#x2F;docs&#x2F;concepts&#x2F;overview&#x2F;working-with-objects&#x2F;&quot;&gt;Kubernetes objects (manifests)&lt;&#x2F;a&gt; as &lt;strong&gt;configuration&lt;&#x2F;strong&gt;. We will also assume that the &lt;strong&gt;workloads&lt;&#x2F;strong&gt; are deployed using &lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;azure&#x2F;architecture&#x2F;example-scenario&#x2F;gitops-aks&#x2F;gitops-blueprint-aks&quot;&gt;GitOps&lt;&#x2F;a&gt; principles, where the &lt;strong&gt;configuration&lt;&#x2F;strong&gt; is stored in a Git repository and monitored by GitOps agents (e.g. &lt;a href=&quot;https:&#x2F;&#x2F;fluxcd.io&#x2F;&quot;&gt;Flux&lt;&#x2F;a&gt;) running on clusters in the &lt;strong&gt;fleet&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-problem-does-fleet-configuration-management-solve&quot;&gt;What Problem Does Fleet Configuration Management Solve?&lt;&#x2F;h1&gt;
+&lt;p&gt;Fleet configuration management solves a problem that only becomes apparent when managing many workloads across many clusters. This next series of diagrams outlines the problem as the number of clusters and workloads scales up from a single workload and cluster, to many workloads across many clusters.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;one-workload-one-cluster&quot;&gt;One Workload, One Cluster&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fleet-configuration-management&#x2F;one-workload-one-cluster.png&quot; alt=&quot;diagram of one workload, one cluster&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The simplest scenario starts with one workload being deployed into one cluster. The workload’s Kubernetes manifests are committed into a GitHub repository that is monitored by the Flux GitOps agent. When a change is made to the workload’s Kubernetes manifests, that change is detected and applied automatically in the cluster.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;one-workload-many-clusters&quot;&gt;One Workload, Many Clusters&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fleet-configuration-management&#x2F;one-workload-many-clusters.png&quot; alt=&quot;diagram of one workload, many clusters&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;For the workload to be deployed to a fleet of Kubernetes clusters, each cluster just needs to host its own Flux agent that is configured to watch the same set of Kubernetes manifests for the workload. When a change is made to the workload’s Kubernetes manifests, that change is detected and applied by each Flux agent independently. This enables one instance of the workload to be deployed into each cluster in the fleet.&lt;&#x2F;p&gt;
+&lt;p&gt;However, it is usually the case that each instance of this workload needs to be configured differently. This is because clusters in a fleet will often serve different purposes, and configuration must be applied to reflect that. For example, different hostnames, workload scaling behaviors, or feature flags might need to be controlled separately for different clusters in the fleet.&lt;&#x2F;p&gt;
+&lt;p&gt;This can be made possible by providing multiple configurations as part of the workload’s Kubernetes manifests and modifying the Flux agents to watch their own dedicated configurations.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fleet-configuration-management&#x2F;one-workload-many-configs.png&quot; alt=&quot;diagram of one workload, many configurations&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This enables independent configuration for each instance of the workload at the cost of additional complexity for managing configuration manifests and Flux agents.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;many-workloads-many-clusters&quot;&gt;Many Workloads, Many Clusters&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fleet-configuration-management&#x2F;many-workloads-many-clusters.png&quot; alt=&quot;diagram of many workloads, many clusters&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;To support additional workloads, the same setup needs to be replicated. Each workload will have its own set of Kubernetes manifests that each contains configuration for each cluster in the fleet and each flux agent needs to know what configurations to watch.&lt;&#x2F;p&gt;
+&lt;p&gt;While this works and can be manageable for a small number of workloads and clusters, &lt;strong&gt;the complexity of manually creating workload configurations does not scale well as the number of workloads and clusters increases&lt;&#x2F;strong&gt;. Each workload must provide a unique set of configurations for each cluster in the fleet, and each cluster must be configured to watch the appropriate manifests.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-role-of-a-configuration-management-system&quot;&gt;The Role of a Configuration Management System&lt;&#x2F;h2&gt;
+&lt;p&gt;A fleet configuration management system is an automated system that aims to simplify the complexities of manually managing workload configurations for the fleet. These systems serve 3 purposes:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Controlling what workloads get deployed into what clusters&lt;&#x2F;li&gt;
+&lt;li&gt;Composing and delivering configurations for workloads onto clusters&lt;&#x2F;li&gt;
+&lt;li&gt;Observability for inspecting what workloads are deployed on what clusters&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fleet-configuration-management&#x2F;configuration-management-system.png&quot; alt=&quot;configuration management system simplification&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Configuration management systems provide automation to reduce the amount of manual configuration from multiplicative scaling to additive scaling by the number of workloads and clusters in the fleet.&lt;&#x2F;p&gt;
+&lt;p&gt;This allows engineering and operations teams to easily scale the number of workloads and clusters. When a new workload or cluster is added, it only needs to be registered with the fleet configuration management system. The system will then automatically compose and deliver the appropriate configurations to the clusters in the fleet.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;do-i-need-a-fleet-configuration-management-system&quot;&gt;Do I Need A Fleet Configuration Management System?&lt;&#x2F;h2&gt;
+&lt;p&gt;Registering workloads and clusters with a fleet configuration management system requires managing higher-level deployment abstractions and managing a system that operates on these abstractions to automate configuration delivery. This adds complexity to the system and requires additional operational overhead. It is important to weigh this cost against the cost of manually curating workload configurations in your system.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;example-architecture-with-kalypso&quot;&gt;Example Architecture With Kalypso&lt;&#x2F;h1&gt;
+&lt;p&gt;This is an example architecture that generalizes the architecture that we built in our recent customer engagement. For more details on getting started with Kalypso, see its &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;kalypso?tab=readme-ov-file#referenced-repositories&quot;&gt;GitHub repositories&lt;&#x2F;a&gt; and the following Microsoft Learn pages:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;azure&#x2F;azure-arc&#x2F;kubernetes&#x2F;conceptual-workload-management&quot;&gt;Workload management in a multi-cluster environment with GitOps&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;azure&#x2F;azure-arc&#x2F;kubernetes&#x2F;workload-management&quot;&gt;Explore workload management in a multi-cluster environment with GitOps&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;personas&quot;&gt;Personas&lt;&#x2F;h2&gt;
+&lt;p&gt;This architecture serves two personas: the &lt;strong&gt;Application Engineer&lt;&#x2F;strong&gt; and the &lt;strong&gt;Platform Engineer&lt;&#x2F;strong&gt;. There may be many different Application Engineers, one for each independent workload.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;strong&gt;Application Engineer&lt;&#x2F;strong&gt; owns and authors workloads that run within the fleet of Kubernetes clusters. Each workload has its own independent software development lifecycle that is defined and practiced by the Application Engineer.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;strong&gt;Platform Engineer&lt;&#x2F;strong&gt; owns and manages the Kalypso Fleet Configuration Management Cluster. This service facilitates the complexities of generating and distributing the appropriate configuration across the fleet for all workloads.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;architecture-diagram&quot;&gt;Architecture Diagram&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fleet-configuration-management&#x2F;fleet-management.png&quot; alt=&quot;architecture diagram&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;system-workflow&quot;&gt;System Workflow&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Application Engineers author changes to their workloads independently via git contributions.&lt;&#x2F;li&gt;
+&lt;li&gt;Continuous Integration flows run independently in response to changes to workload source code.&lt;&#x2F;li&gt;
+&lt;li&gt;Continuous Integration (CI) automatically compiles and publishes artifacts for use in deployments. For example, Docker images are built and pushed into Azure Container Registry for fleet clusters to pull from.&lt;&#x2F;li&gt;
+&lt;li&gt;Continuous Deployment (CD) automatically compiles and publishes GitOps manifests for deployment into fleet clusters. For example, Kubernetes yaml files might get rendered and pushed to the GitHub repositories monitored by Flux agents in the fleet.&lt;&#x2F;li&gt;
+&lt;li&gt;Platform Engineers schedule workload deployments to the fleet and coordinate generating platform dependent workload configuration. This is done via git contributions to the Platform Control Plane repository.&lt;&#x2F;li&gt;
+&lt;li&gt;The Kalypso Scheduler running inside the management cluster automatically compiles and publishes GitOps manifests for deployment into fleet clusters. These are Kubernetes yaml files monitored by Flux agents in the fleet.&lt;&#x2F;li&gt;
+&lt;li&gt;Flux agents in the fleet detect any changes to GitOps manifests from workloads and the platform GitOps repository.&lt;&#x2F;li&gt;
+&lt;li&gt;Flux agents interact with their respective Kubernetes API servers to ensure that resources are provisioned in the fleet.&lt;&#x2F;li&gt;
+&lt;li&gt;The Observability Hub running inside the management cluster monitors deployment state for all workloads across the fleet. This information is surfaced in Grafana dashboards.&lt;&#x2F;li&gt;
+&lt;li&gt;Engineers monitor workload deployments across the fleet using deployment observability dashboards.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;kalypso-runbooks&quot;&gt;Kalypso Runbooks&lt;&#x2F;h2&gt;
+&lt;p&gt;To learn more about how Application Engineers and Platform Engineers use this system, see the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;kalypso&#x2F;tree&#x2F;main&#x2F;docs&#x2F;run-books&quot;&gt;Kalypso Runbooks&lt;&#x2F;a&gt; in Kalypso’s documentation. These runbooks provide step-by-step instructions on the common Kalypso use cases and include examples for each scenario.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h1&gt;
+&lt;p&gt;Fleet configuration management is a powerful tool for scaling configuration management for many different workloads across many different hosting platforms. These systems automate the tedious work of managing individual configuration files by using higher level abstractions to compose and deliver configuration to the fleet.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;&#x2F;h2&gt;
+&lt;p&gt;Thank you to the rest of the ISE dev crew who helped with the customer engagement that inspired this post &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;bindu-msft-cse&#x2F;&quot;&gt;Bindu Chinnasamy&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;johnhauppa&#x2F;&quot;&gt;John Hauppa&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;uffaz-nathaniel-85588935&#x2F;&quot;&gt;Uffaz Nathaniel&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;bryan77&#x2F;&quot;&gt;Bryan Leighton&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;lundlaura&#x2F;&quot;&gt;Laura Lund&lt;&#x2F;a&gt;, and &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;kanishk-t-1723b2107&#x2F;&quot;&gt;Kanishk Tantia&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;And a special thank you to &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;eugene-fedorenko-661a2636&#x2F;&quot;&gt;Eugene Fedorenko&lt;&#x2F;a&gt; for his expertise and guidance on using Kalypso.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ise-developer-blog&quot;&gt;ISE Developer Blog&lt;&#x2F;h2&gt;
+&lt;p&gt;This post is also publised to the &lt;a href=&quot;https:&#x2F;&#x2F;devblogs.microsoft.com&#x2F;ise&#x2F;fleet-configuration-management&#x2F;&quot;&gt;Microsoft ISE Developer Blog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">This post explains the challenge of fleet configuration management, the role of an automated fleet configuration management system, and describes key considerations for building such a system.</summary>
+        </entry>
+</feed>

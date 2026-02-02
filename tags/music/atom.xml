@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://camerontaylor.dev/feed_style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <tabi:metadata xmlns:tabi="https://github.com/welpo/tabi">
+        <tabi:base_url>https:&#x2F;&#x2F;camerontaylor.dev&#x2F;</tabi:base_url>
+        <tabi:separator>
+            •
+        </tabi:separator>
+        <tabi:about_feeds>This is a web feed, also known as an Atom feed. Subscribe by copying the URL from the address bar into your newsreader. Visit About Feeds to learn more and get started. It&#x27;s free.</tabi:about_feeds>
+        <tabi:visit_the_site>Visit website</tabi:visit_the_site>
+        <tabi:recent_posts>Recent posts</tabi:recent_posts>
+        <tabi:last_updated_on>Updated on $DATE</tabi:last_updated_on>
+        <tabi:default_theme></tabi:default_theme>
+        <tabi:post_listing_date>both</tabi:post_listing_date>
+        <tabi:current_section>Music</tabi:current_section>
+    </tabi:metadata><link rel="extra-stylesheet" href="https://camerontaylor.dev/skins/axis7818.css?h=cdb8697ca14ade6b2d00" /><title>~/camerontaylor.dev - Music</title>
+        <subtitle>A personal website for Cameron Taylor</subtitle>
+    <link href="https://camerontaylor.dev/tags/music/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://camerontaylor.dev/tags/music/" rel="alternate" type="text/html"/>
+    <generator uri="https://www.getzola.org/">Zola</generator><updated>2025-03-27T00:00:00+00:00</updated><id>https://camerontaylor.dev/tags/music/atom.xml</id><entry xml:lang="en">
+        <title>Top 10 Albums of All Time</title>
+        <published>2025-03-27T00:00:00+00:00</published>
+        <updated>2025-03-27T00:00:00+00:00</updated>
+        <author>
+            <name>Cameron Taylor</name>
+        </author>
+        <link rel="alternate" href="https://camerontaylor.dev/blog/top-10-albums/" type="text/html"/>
+        <id>https://camerontaylor.dev/blog/top-10-albums/</id>
+        
+            <content type="html">&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;finally-10-albums.jpg&quot; alt=&quot;finally, the 10 best albums&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;After years of searching, I have finally found the objective &amp;amp; undisputed list of the 10 best albums ever made 
+
+
+&lt;label class=&quot;spoiler-container&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;spoiler-32814&quot; class=&quot;spoiler-toggle&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; &#x2F;&gt;
+    &lt;span class=&quot;spoiler-content&quot; title=&quot;reveal spoiler&quot; tabindex=&quot;0&quot;&gt;
+        &lt;span class=&quot;spoiler-hidden&quot;&gt;according to me&lt;&#x2F;p&gt;
+&lt;&#x2F;span&gt;
+    &lt;&#x2F;span&gt;
+&lt;&#x2F;label&gt;
+.&lt;&#x2F;p&gt;
+&lt;p&gt;Listen to them all back-to-back in the &lt;a href=&quot;https:&#x2F;&#x2F;open.spotify.com&#x2F;playlist&#x2F;07JRBdNwXCANN3CZB8LHyD&quot;&gt;Top 10 Albums of All Time&lt;&#x2F;a&gt; Spotify playlist. It’ll only take 11 hours and 36 minutes.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+
+
+
+
+&lt;h1&gt;1. Metropolis, Pt. 2: Scenes from a Memory&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;1QZi8laY96nhaeGSklvN4D&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;2. Blackwater Park&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;7cMJfxkJwUAcxHCHQMNYYs&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;3. Maps of Non-Existent Places&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;4NAHM8oVybVaSLphQX3L2u&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;4. Soft Hell&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;0ys96Qw1xkiT49nEFeaOBT&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;5. Remedy Lane&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;5wdXBbdGH90qfKoWBErbdw&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;6. Fear of a Blank Planet&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;59J51uy6r6QcYe7cX0Fzz6&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;7. Breakfast In America&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;7i75GRwJbhDDiLi2uQHTtZ&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;8. Stadium Arcadium&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;7xl50xr9NDkd3i2kBbzsNZ&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;9. Lateralus&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;5l5m1hnH4punS1GQXgEi3T&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;10. The Mountain&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;3RBULTZJ97bvVzZLpxcB0j&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+</content>
+        <summary type="html">After years of searching, I have finally found the objective &amp; undisputed list of the 10 best albums ever made</summary>
+        </entry>
+</feed>

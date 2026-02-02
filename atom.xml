@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://camerontaylor.dev/feed_style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <tabi:metadata xmlns:tabi="https://github.com/welpo/tabi">
+        <tabi:base_url>https:&#x2F;&#x2F;camerontaylor.dev&#x2F;</tabi:base_url>
+        <tabi:separator>
+            •
+        </tabi:separator>
+        <tabi:about_feeds>This is a web feed, also known as an Atom feed. Subscribe by copying the URL from the address bar into your newsreader. Visit About Feeds to learn more and get started. It&#x27;s free.</tabi:about_feeds>
+        <tabi:visit_the_site>Visit website</tabi:visit_the_site>
+        <tabi:recent_posts>Recent posts</tabi:recent_posts>
+        <tabi:last_updated_on>Updated on $DATE</tabi:last_updated_on>
+        <tabi:default_theme></tabi:default_theme>
+        <tabi:post_listing_date>both</tabi:post_listing_date>
+        <tabi:current_section>~&#x2F;camerontaylor.dev</tabi:current_section>
+    </tabi:metadata><link rel="extra-stylesheet" href="https://camerontaylor.dev/skins/axis7818.css?h=cdb8697ca14ade6b2d00" /><title>~/camerontaylor.dev</title>
+        <subtitle>A personal website for Cameron Taylor</subtitle>
+    <link href="https://camerontaylor.dev/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://camerontaylor.dev" rel="alternate" type="text/html"/>
+    <generator uri="https://www.getzola.org/">Zola</generator><updated>2025-12-16T00:00:00+00:00</updated><id>https://camerontaylor.dev/atom.xml</id><entry xml:lang="en">
+        <title>Fixing GitHub Copilot Inline Suggestions</title>
+        <published>2025-09-17T00:00:00+00:00</published>
+        <updated>2025-12-16T00:00:00+00:00</updated>
+        <author>
+            <name>Cameron Taylor</name>
+        </author>
+        <link rel="alternate" href="https://camerontaylor.dev/blog/fixing-ghcp-inline-suggestions/" type="text/html"/>
+        <id>https://camerontaylor.dev/blog/fixing-ghcp-inline-suggestions/</id>
+        
+            <content type="html">&lt;p&gt;and other improvements to GitHub Copilot usability…&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;camerontaylor.dev&#x2F;blog&#x2F;fixing-ghcp-inline-suggestions&#x2F;#better-inline-suggestions&quot;&gt;Better Inline Suggestions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;camerontaylor.dev&#x2F;blog&#x2F;fixing-ghcp-inline-suggestions&#x2F;#fix-tab-completion-with-terminal-suggestions&quot;&gt;Fix Tab Completion with Terminal Suggestions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;better-inline-suggestions&quot;&gt;Better Inline Suggestions&lt;&#x2F;h2&gt;
+&lt;p&gt;One of the most frustrated things about using GitHub Copilot has been the default behavior of inline suggestions. If I were piloting a plane, it would be very annoying if the copilot decided to reach over and grab my controls any time it pleased.&lt;&#x2F;p&gt;
+&lt;p&gt;However, there are times when I do wish I had access to these suggestions, so I do not want to disable them completely.&lt;&#x2F;p&gt;
+&lt;p&gt;The following shows how to disable inline suggestions by default and invoke it with an explicit keyboard shortcut.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;disable-inline-suggestions&quot;&gt;Disable Inline Suggestions&lt;&#x2F;h3&gt;
+&lt;p&gt;Add the following to your VSCode user settings. This disables inline suggestions.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;json&quot; class=&quot;language-json z-code&quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-mapping z-begin z-json&quot;&gt;{&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;    &lt;span class=&quot;z-comment z-line z-double-slash z-js&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-json&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt; other settings . . .
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;    &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-key z-json&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;editor.inlineSuggest.enabled&lt;span class=&quot;z-punctuation z-definition z-string z-end z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-separator z-mapping z-key-value z-json&quot;&gt;:&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-constant z-language z-json&quot;&gt;false&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-mapping z-end z-json&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;trigger-inline-suggestions&quot;&gt;Trigger Inline Suggestions&lt;&#x2F;h3&gt;
+&lt;p&gt;When you wish to invoke inline suggestions, use the &lt;code&gt;editor.action.inlineSuggest.trigger&lt;&#x2F;code&gt; vscode command.&lt;&#x2F;p&gt;
+&lt;p&gt;By default, this is bound to &lt;code&gt;alt+\&lt;&#x2F;code&gt; on windows and &lt;code&gt;opt+\&lt;&#x2F;code&gt; on mac.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;accept-inline-suggestions&quot;&gt;Accept Inline Suggestions&lt;&#x2F;h3&gt;
+&lt;p&gt;One the suggestion appears, it can be accepted as normal with &lt;code&gt;tab&lt;&#x2F;code&gt;. Or, using the &lt;code&gt;editor.action.inlineSuggest.acceptNextWord&lt;&#x2F;code&gt; and &lt;code&gt;editor.action.inlineSuggest.acceptNextLine&lt;&#x2F;code&gt; vscode commands, the first parts of the suggestions can be accepted. These are helpful when only the first portion of the inline suggestion is desired.&lt;&#x2F;p&gt;
+&lt;p&gt;By default, &lt;code&gt;editor.action.inlineSuggest.acceptNextWord&lt;&#x2F;code&gt; is bound to &lt;code&gt;ctrl+right&lt;&#x2F;code&gt; on windows and &lt;code&gt;cmd+right&lt;&#x2F;code&gt; on mac. But, &lt;code&gt;editor.action.inlineSuggest.acceptNextLine&lt;&#x2F;code&gt; has no keybinding, so you will need to make a custom shortcut.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fixing-ghcp-inline-suggestions&#x2F;incremental-inline-suggest.gif&quot; alt=&quot;screen recording of using inline suggestions&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fix-tab-completion-with-terminal-suggestions&quot;&gt;Fix Tab Completion with Terminal Suggestions&lt;&#x2F;h2&gt;
+&lt;p&gt;GitHub Copilot includes suggestions for completing commands when using the integrated terminal in VSCode. By default, pressing &lt;code&gt;tab&lt;&#x2F;code&gt; or &lt;code&gt;enter&lt;&#x2F;code&gt; will execute the first command, which is annoying because tab completion is deeply ingrained in the muscle memory of anyone who uses a terminal regularly.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fixing-ghcp-inline-suggestions&#x2F;inline-suggest.png&quot; alt=&quot;screenshot of inline suggestions&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;No… I don’t want to clone a whole repo in my current project…&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Setting the selection mode in user settings to &lt;code&gt;&quot;never&quot;&lt;&#x2F;code&gt; will require first navigating to a suggestion using arrow keys.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;json&quot; class=&quot;language-json z-code&quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-mapping z-begin z-json&quot;&gt;{&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;    &lt;span class=&quot;z-comment z-line z-double-slash z-js&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-json&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt; other settings . . .
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;  &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-key z-json&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;terminal.integrated.suggest.selectionMode&lt;span class=&quot;z-punctuation z-definition z-string z-end z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-separator z-mapping z-key-value z-json&quot;&gt;:&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;never&lt;span class=&quot;z-punctuation z-definition z-string z-end z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-mapping z-pair z-json&quot;&gt;,&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-mapping z-end z-json&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        <summary type="html">and other improvements to GitHub Copilot usability...</summary>
+        </entry><entry xml:lang="en">
+        <title>Fleet Configuration Management</title>
+        <published>2025-04-07T00:00:00+00:00</published>
+        <updated>2025-04-07T00:00:00+00:00</updated>
+        <author>
+            <name>Cameron Taylor</name>
+        </author>
+        <link rel="alternate" href="https://camerontaylor.dev/blog/fleet-configuration-management/" type="text/html"/>
+        <id>https://camerontaylor.dev/blog/fleet-configuration-management/</id>
+        
+            <content type="html">&lt;p&gt;This post is also publised to the &lt;a href=&quot;https:&#x2F;&#x2F;devblogs.microsoft.com&#x2F;ise&#x2F;fleet-configuration-management&#x2F;&quot;&gt;Microsoft ISE Developer Blog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h1&gt;
+&lt;p&gt;Recently, my team at Microsoft completed a customer engagement that involved managing edge deployments onto factory floors across geographical locations. This system needed to support existing workloads migrated from Azure IoT Hub, new workloads for processing IoT data feeds, and machine learning workloads for performing inference to ship intelligence to the edge.&lt;&#x2F;p&gt;
+&lt;p&gt;During this engagement, we built a system to handle this complexity using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;kalypso&quot;&gt;Kalypso&lt;&#x2F;a&gt; to orchestrate GitOps deployments across a fleet of &lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;azure&#x2F;azure-arc&#x2F;kubernetes&#x2F;overview&quot;&gt;arc-enabled Kubernetes clusters&lt;&#x2F;a&gt; hosting &lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;azure&#x2F;iot-operations&#x2F;overview-iot-operations&quot;&gt;Azure IoT Operations&lt;&#x2F;a&gt; to support cloud connectivity and IoT device telemetry.&lt;&#x2F;p&gt;
+&lt;p&gt;This post explains the challenge of fleet configuration management, the role of an automated fleet configuration management system, and describes key considerations for building such a system.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;what-is-fleet-configuration-management&quot;&gt;What Is Fleet Configuration Management?&lt;&#x2F;h2&gt;
+&lt;p&gt;An automated fleet configuration management system is essential in a scenario where many workloads or applications need to be deployed and managed across a fleet of hosting platforms. This can be the case for cloud hosted platforms serving separate purposes, or edge hosted platforms where workloads need to be distributed across separate locations.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;example-fleet-configuration-management-systems&quot;&gt;Example Fleet Configuration Management Systems&lt;&#x2F;h2&gt;
+&lt;p&gt;There are a few options for implementing a fleet configuration management system. The one that works best for a given scenario will depend on details such as the hosting platforms that they support, licensing, and operational requirements. All of these options require managing a single separate Kubernetes cluster to run the automation work of the system.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;azure&#x2F;kubernetes-fleet&#x2F;overview&quot;&gt;Azure Kubernetes Fleet Manager&lt;&#x2F;a&gt;: This is a good choice for cloud-hosted AKS workloads and provides features for orchestrating Kubernetes cluster operations such as cluster version upgrades. A “Hub Cluster” hosts a Kubernetes controller that reconciles all of the workloads running on member clusters.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;fleet.rancher.io&#x2F;&quot;&gt;Rancher Fleet&lt;&#x2F;a&gt;: This is a good choice if you are using Rancher to manage your Kubernetes clusters. It is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rancher&#x2F;fleet&quot;&gt;open source&lt;&#x2F;a&gt; and uses a Fleet Agent to manage individual workloads on clusters within the fleet. A “Fleet Controller Cluster” hosts a Kubernetes controller and is monitored by all of the individual fleet clusters.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;kalypso&quot;&gt;Kalypso&lt;&#x2F;a&gt;: This is a good choice for full flexibility as it is compatible with edge or cloud-hosted clusters and works with any GitOps agents (Flux, ArgoCD, etc.). The Kalypso scheduler runs on a designated Kubernetes cluster and orchestrates pull requests to GitOps repositories that are monitored by separate GitOps clusters. See &lt;a href=&quot;https:&#x2F;&#x2F;camerontaylor.dev&#x2F;blog&#x2F;fleet-configuration-management&#x2F;#example-architecture-with-kalypso&quot;&gt;Example Architecture With Kalypso&lt;&#x2F;a&gt; below for an example architecture using Kalypso.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;definitions&quot;&gt;Definitions&lt;&#x2F;h2&gt;
+&lt;p&gt;Before getting into the details, lets first define terms as they appear in this post.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;A &lt;strong&gt;fleet&lt;&#x2F;strong&gt; is a collection of hosting platforms that are managed together.&lt;&#x2F;li&gt;
+&lt;li&gt;A &lt;strong&gt;workload&lt;&#x2F;strong&gt; is a piece of software that is deployed as a unit onto the &lt;strong&gt;fleet&lt;&#x2F;strong&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Configuration&lt;&#x2F;strong&gt; represents a specific permutation of settings and specifications to make an instance of a &lt;strong&gt;workload&lt;&#x2F;strong&gt; run correctly in the &lt;strong&gt;fleet&lt;&#x2F;strong&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Generally, a &lt;strong&gt;fleet&lt;&#x2F;strong&gt; is composed of many hosting platforms, and there are many &lt;strong&gt;workloads&lt;&#x2F;strong&gt; that are deployed, each with a unique set of &lt;strong&gt;configuration&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;The specific details will depend on what the hosting platform and workloads are, but for this post, we will use &lt;a href=&quot;https:&#x2F;&#x2F;kubernetes.io&#x2F;&quot;&gt;Kubernetes&lt;&#x2F;a&gt; clusters as the &lt;strong&gt;fleet&lt;&#x2F;strong&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;helm.sh&#x2F;&quot;&gt;Helm&lt;&#x2F;a&gt; charts as &lt;strong&gt;workloads&lt;&#x2F;strong&gt;, and rendered &lt;a href=&quot;https:&#x2F;&#x2F;kubernetes.io&#x2F;docs&#x2F;concepts&#x2F;overview&#x2F;working-with-objects&#x2F;&quot;&gt;Kubernetes objects (manifests)&lt;&#x2F;a&gt; as &lt;strong&gt;configuration&lt;&#x2F;strong&gt;. We will also assume that the &lt;strong&gt;workloads&lt;&#x2F;strong&gt; are deployed using &lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;azure&#x2F;architecture&#x2F;example-scenario&#x2F;gitops-aks&#x2F;gitops-blueprint-aks&quot;&gt;GitOps&lt;&#x2F;a&gt; principles, where the &lt;strong&gt;configuration&lt;&#x2F;strong&gt; is stored in a Git repository and monitored by GitOps agents (e.g. &lt;a href=&quot;https:&#x2F;&#x2F;fluxcd.io&#x2F;&quot;&gt;Flux&lt;&#x2F;a&gt;) running on clusters in the &lt;strong&gt;fleet&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-problem-does-fleet-configuration-management-solve&quot;&gt;What Problem Does Fleet Configuration Management Solve?&lt;&#x2F;h1&gt;
+&lt;p&gt;Fleet configuration management solves a problem that only becomes apparent when managing many workloads across many clusters. This next series of diagrams outlines the problem as the number of clusters and workloads scales up from a single workload and cluster, to many workloads across many clusters.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;one-workload-one-cluster&quot;&gt;One Workload, One Cluster&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fleet-configuration-management&#x2F;one-workload-one-cluster.png&quot; alt=&quot;diagram of one workload, one cluster&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The simplest scenario starts with one workload being deployed into one cluster. The workload’s Kubernetes manifests are committed into a GitHub repository that is monitored by the Flux GitOps agent. When a change is made to the workload’s Kubernetes manifests, that change is detected and applied automatically in the cluster.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;one-workload-many-clusters&quot;&gt;One Workload, Many Clusters&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fleet-configuration-management&#x2F;one-workload-many-clusters.png&quot; alt=&quot;diagram of one workload, many clusters&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;For the workload to be deployed to a fleet of Kubernetes clusters, each cluster just needs to host its own Flux agent that is configured to watch the same set of Kubernetes manifests for the workload. When a change is made to the workload’s Kubernetes manifests, that change is detected and applied by each Flux agent independently. This enables one instance of the workload to be deployed into each cluster in the fleet.&lt;&#x2F;p&gt;
+&lt;p&gt;However, it is usually the case that each instance of this workload needs to be configured differently. This is because clusters in a fleet will often serve different purposes, and configuration must be applied to reflect that. For example, different hostnames, workload scaling behaviors, or feature flags might need to be controlled separately for different clusters in the fleet.&lt;&#x2F;p&gt;
+&lt;p&gt;This can be made possible by providing multiple configurations as part of the workload’s Kubernetes manifests and modifying the Flux agents to watch their own dedicated configurations.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fleet-configuration-management&#x2F;one-workload-many-configs.png&quot; alt=&quot;diagram of one workload, many configurations&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This enables independent configuration for each instance of the workload at the cost of additional complexity for managing configuration manifests and Flux agents.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;many-workloads-many-clusters&quot;&gt;Many Workloads, Many Clusters&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fleet-configuration-management&#x2F;many-workloads-many-clusters.png&quot; alt=&quot;diagram of many workloads, many clusters&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;To support additional workloads, the same setup needs to be replicated. Each workload will have its own set of Kubernetes manifests that each contains configuration for each cluster in the fleet and each flux agent needs to know what configurations to watch.&lt;&#x2F;p&gt;
+&lt;p&gt;While this works and can be manageable for a small number of workloads and clusters, &lt;strong&gt;the complexity of manually creating workload configurations does not scale well as the number of workloads and clusters increases&lt;&#x2F;strong&gt;. Each workload must provide a unique set of configurations for each cluster in the fleet, and each cluster must be configured to watch the appropriate manifests.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-role-of-a-configuration-management-system&quot;&gt;The Role of a Configuration Management System&lt;&#x2F;h2&gt;
+&lt;p&gt;A fleet configuration management system is an automated system that aims to simplify the complexities of manually managing workload configurations for the fleet. These systems serve 3 purposes:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Controlling what workloads get deployed into what clusters&lt;&#x2F;li&gt;
+&lt;li&gt;Composing and delivering configurations for workloads onto clusters&lt;&#x2F;li&gt;
+&lt;li&gt;Observability for inspecting what workloads are deployed on what clusters&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fleet-configuration-management&#x2F;configuration-management-system.png&quot; alt=&quot;configuration management system simplification&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Configuration management systems provide automation to reduce the amount of manual configuration from multiplicative scaling to additive scaling by the number of workloads and clusters in the fleet.&lt;&#x2F;p&gt;
+&lt;p&gt;This allows engineering and operations teams to easily scale the number of workloads and clusters. When a new workload or cluster is added, it only needs to be registered with the fleet configuration management system. The system will then automatically compose and deliver the appropriate configurations to the clusters in the fleet.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;do-i-need-a-fleet-configuration-management-system&quot;&gt;Do I Need A Fleet Configuration Management System?&lt;&#x2F;h2&gt;
+&lt;p&gt;Registering workloads and clusters with a fleet configuration management system requires managing higher-level deployment abstractions and managing a system that operates on these abstractions to automate configuration delivery. This adds complexity to the system and requires additional operational overhead. It is important to weigh this cost against the cost of manually curating workload configurations in your system.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;example-architecture-with-kalypso&quot;&gt;Example Architecture With Kalypso&lt;&#x2F;h1&gt;
+&lt;p&gt;This is an example architecture that generalizes the architecture that we built in our recent customer engagement. For more details on getting started with Kalypso, see its &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;kalypso?tab=readme-ov-file#referenced-repositories&quot;&gt;GitHub repositories&lt;&#x2F;a&gt; and the following Microsoft Learn pages:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;azure&#x2F;azure-arc&#x2F;kubernetes&#x2F;conceptual-workload-management&quot;&gt;Workload management in a multi-cluster environment with GitOps&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;learn.microsoft.com&#x2F;en-us&#x2F;azure&#x2F;azure-arc&#x2F;kubernetes&#x2F;workload-management&quot;&gt;Explore workload management in a multi-cluster environment with GitOps&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;personas&quot;&gt;Personas&lt;&#x2F;h2&gt;
+&lt;p&gt;This architecture serves two personas: the &lt;strong&gt;Application Engineer&lt;&#x2F;strong&gt; and the &lt;strong&gt;Platform Engineer&lt;&#x2F;strong&gt;. There may be many different Application Engineers, one for each independent workload.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;strong&gt;Application Engineer&lt;&#x2F;strong&gt; owns and authors workloads that run within the fleet of Kubernetes clusters. Each workload has its own independent software development lifecycle that is defined and practiced by the Application Engineer.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;strong&gt;Platform Engineer&lt;&#x2F;strong&gt; owns and manages the Kalypso Fleet Configuration Management Cluster. This service facilitates the complexities of generating and distributing the appropriate configuration across the fleet for all workloads.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;architecture-diagram&quot;&gt;Architecture Diagram&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fleet-configuration-management&#x2F;fleet-management.png&quot; alt=&quot;architecture diagram&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;system-workflow&quot;&gt;System Workflow&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Application Engineers author changes to their workloads independently via git contributions.&lt;&#x2F;li&gt;
+&lt;li&gt;Continuous Integration flows run independently in response to changes to workload source code.&lt;&#x2F;li&gt;
+&lt;li&gt;Continuous Integration (CI) automatically compiles and publishes artifacts for use in deployments. For example, Docker images are built and pushed into Azure Container Registry for fleet clusters to pull from.&lt;&#x2F;li&gt;
+&lt;li&gt;Continuous Deployment (CD) automatically compiles and publishes GitOps manifests for deployment into fleet clusters. For example, Kubernetes yaml files might get rendered and pushed to the GitHub repositories monitored by Flux agents in the fleet.&lt;&#x2F;li&gt;
+&lt;li&gt;Platform Engineers schedule workload deployments to the fleet and coordinate generating platform dependent workload configuration. This is done via git contributions to the Platform Control Plane repository.&lt;&#x2F;li&gt;
+&lt;li&gt;The Kalypso Scheduler running inside the management cluster automatically compiles and publishes GitOps manifests for deployment into fleet clusters. These are Kubernetes yaml files monitored by Flux agents in the fleet.&lt;&#x2F;li&gt;
+&lt;li&gt;Flux agents in the fleet detect any changes to GitOps manifests from workloads and the platform GitOps repository.&lt;&#x2F;li&gt;
+&lt;li&gt;Flux agents interact with their respective Kubernetes API servers to ensure that resources are provisioned in the fleet.&lt;&#x2F;li&gt;
+&lt;li&gt;The Observability Hub running inside the management cluster monitors deployment state for all workloads across the fleet. This information is surfaced in Grafana dashboards.&lt;&#x2F;li&gt;
+&lt;li&gt;Engineers monitor workload deployments across the fleet using deployment observability dashboards.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;kalypso-runbooks&quot;&gt;Kalypso Runbooks&lt;&#x2F;h2&gt;
+&lt;p&gt;To learn more about how Application Engineers and Platform Engineers use this system, see the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;kalypso&#x2F;tree&#x2F;main&#x2F;docs&#x2F;run-books&quot;&gt;Kalypso Runbooks&lt;&#x2F;a&gt; in Kalypso’s documentation. These runbooks provide step-by-step instructions on the common Kalypso use cases and include examples for each scenario.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h1&gt;
+&lt;p&gt;Fleet configuration management is a powerful tool for scaling configuration management for many different workloads across many different hosting platforms. These systems automate the tedious work of managing individual configuration files by using higher level abstractions to compose and deliver configuration to the fleet.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;&#x2F;h2&gt;
+&lt;p&gt;Thank you to the rest of the ISE dev crew who helped with the customer engagement that inspired this post &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;bindu-msft-cse&#x2F;&quot;&gt;Bindu Chinnasamy&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;johnhauppa&#x2F;&quot;&gt;John Hauppa&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;uffaz-nathaniel-85588935&#x2F;&quot;&gt;Uffaz Nathaniel&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;bryan77&#x2F;&quot;&gt;Bryan Leighton&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;lundlaura&#x2F;&quot;&gt;Laura Lund&lt;&#x2F;a&gt;, and &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;kanishk-t-1723b2107&#x2F;&quot;&gt;Kanishk Tantia&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;And a special thank you to &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;eugene-fedorenko-661a2636&#x2F;&quot;&gt;Eugene Fedorenko&lt;&#x2F;a&gt; for his expertise and guidance on using Kalypso.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ise-developer-blog&quot;&gt;ISE Developer Blog&lt;&#x2F;h2&gt;
+&lt;p&gt;This post is also publised to the &lt;a href=&quot;https:&#x2F;&#x2F;devblogs.microsoft.com&#x2F;ise&#x2F;fleet-configuration-management&#x2F;&quot;&gt;Microsoft ISE Developer Blog&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">This post explains the challenge of fleet configuration management, the role of an automated fleet configuration management system, and describes key considerations for building such a system.</summary>
+        </entry><entry xml:lang="en">
+        <title>Top 10 Albums of All Time</title>
+        <published>2025-03-27T00:00:00+00:00</published>
+        <updated>2025-03-27T00:00:00+00:00</updated>
+        <author>
+            <name>Cameron Taylor</name>
+        </author>
+        <link rel="alternate" href="https://camerontaylor.dev/blog/top-10-albums/" type="text/html"/>
+        <id>https://camerontaylor.dev/blog/top-10-albums/</id>
+        
+            <content type="html">&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;finally-10-albums.jpg&quot; alt=&quot;finally, the 10 best albums&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;After years of searching, I have finally found the objective &amp;amp; undisputed list of the 10 best albums ever made 
+
+
+&lt;label class=&quot;spoiler-container&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;spoiler-32814&quot; class=&quot;spoiler-toggle&quot; role=&quot;button&quot; aria-pressed=&quot;false&quot; &#x2F;&gt;
+    &lt;span class=&quot;spoiler-content&quot; title=&quot;reveal spoiler&quot; tabindex=&quot;0&quot;&gt;
+        &lt;span class=&quot;spoiler-hidden&quot;&gt;according to me&lt;&#x2F;p&gt;
+&lt;&#x2F;span&gt;
+    &lt;&#x2F;span&gt;
+&lt;&#x2F;label&gt;
+.&lt;&#x2F;p&gt;
+&lt;p&gt;Listen to them all back-to-back in the &lt;a href=&quot;https:&#x2F;&#x2F;open.spotify.com&#x2F;playlist&#x2F;07JRBdNwXCANN3CZB8LHyD&quot;&gt;Top 10 Albums of All Time&lt;&#x2F;a&gt; Spotify playlist. It’ll only take 11 hours and 36 minutes.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+
+
+
+
+&lt;h1&gt;1. Metropolis, Pt. 2: Scenes from a Memory&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;1QZi8laY96nhaeGSklvN4D&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;2. Blackwater Park&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;7cMJfxkJwUAcxHCHQMNYYs&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;3. Maps of Non-Existent Places&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;4NAHM8oVybVaSLphQX3L2u&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;4. Soft Hell&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;0ys96Qw1xkiT49nEFeaOBT&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;5. Remedy Lane&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;5wdXBbdGH90qfKoWBErbdw&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;6. Fear of a Blank Planet&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;59J51uy6r6QcYe7cX0Fzz6&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;7. Breakfast In America&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;7i75GRwJbhDDiLi2uQHTtZ&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;8. Stadium Arcadium&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;7xl50xr9NDkd3i2kBbzsNZ&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;9. Lateralus&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;5l5m1hnH4punS1GQXgEi3T&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+
+&lt;h1&gt;10. The Mountain&lt;&#x2F;h1&gt;
+&lt;div class=&quot;top10album&quot;&gt;
+    &lt;iframe
+        src=&quot;https:&amp;#x2F;&amp;#x2F;open.spotify.com&amp;#x2F;embed&amp;#x2F;album&amp;#x2F;3RBULTZJ97bvVzZLpxcB0j&quot;
+        width=&quot;100%&quot;
+        height=&quot;512&quot;
+        frameborder=&quot;0&quot;
+        allowfullscreen=&quot;&quot;
+        allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+        loading=&quot;lazy&quot;
+    &gt;&lt;&#x2F;iframe&gt;
+&lt;&#x2F;div&gt;
+
+
+
+
+</content>
+        <summary type="html">After years of searching, I have finally found the objective &amp; undisputed list of the 10 best albums ever made</summary>
+        </entry><entry xml:lang="en">
+        <title>Learning Rust and Building a CLI</title>
+        <published>2025-03-13T00:00:00+00:00</published>
+        <updated>2025-03-13T00:00:00+00:00</updated>
+        <author>
+            <name>Cameron Taylor</name>
+        </author>
+        <link rel="alternate" href="https://camerontaylor.dev/blog/learning-rust/" type="text/html"/>
+        <id>https://camerontaylor.dev/blog/learning-rust/</id>
+        
+            <content type="html">&lt;div class=&quot;unsplashimg&quot;&gt;
+    &lt;img src=&quot;&amp;#x2F;img&amp;#x2F;unsplash&amp;#x2F;thomas-tastet-0eqgB57xMeA-unsplash.jpg&quot; alt=&quot;computer screen with rust code&quot; &#x2F;&gt;
+    &lt;p style=&quot;text-align: center&quot;&gt;
+        Photo by &lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;unsplash.com&amp;#x2F;@thomastastet?utm_content=creditCopyText&amp;amp;utm_medium=referral&amp;amp;utm_source=unsplash&quot;&gt;Thomas Tastet&lt;&#x2F;a&gt; on
+        &lt;a href=&quot;&quot;&gt;Unsplash&lt;&#x2F;a&gt;
+    &lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+&lt;p&gt;Lately, I have been feeling a particularly strong itch to learn a new technology and just build something. This feeling is nothing new to me, as making stuff is my primary motivator and I am drawn to new technologies like a moth to a flame. So, I did what I do best and decided to build an over-engineered tool to solve a minor problem: managing configuration and dotfiles on my development machines.&lt;&#x2F;p&gt;
+&lt;p&gt;Over the course of a day, I use 3 different computers. My work MacBook, my personal MacBook, and my Windows gaming PC. On each of these computers, I install and configure the same set of software (ex: git, zsh, tmux). In order to synchronize configuration across machines, I set up a &lt;a href=&quot;https:&#x2F;&#x2F;dotfiles.github.io&quot;&gt;dotfiles repository&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;With &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;axis7818&#x2F;dotfiles&quot;&gt;my dotfiles repository&lt;&#x2F;a&gt; cloned onto each of my computers, the problem became copying files to their expected filesystem location for the respective tools to use. This can be managed via scripts, but these scripts get tricky when files need to be slightly different for each machine. For example, on my work laptop, I want my gitconfig email address to be my work address rather than my personal one.&lt;&#x2F;p&gt;
+&lt;p&gt;I used this problem as an excuse to learn &lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;&quot;&gt;Rust&lt;&#x2F;a&gt; and build a CLI utility, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;axis7818&#x2F;dotpatina&quot;&gt;dotpatina&lt;&#x2F;a&gt;. Dotpatina allows me to &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;axis7818&#x2F;dotpatina?tab=readme-ov-file#patina-file&quot;&gt;declaratively manage&lt;&#x2F;a&gt; dotfiles using &lt;a href=&quot;https:&#x2F;&#x2F;handlebarsjs.com&#x2F;guide&#x2F;&quot;&gt;handlebars templating&lt;&#x2F;a&gt; and renders &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;axis7818&#x2F;dotpatina?tab=readme-ov-file#applying-a-patina&quot;&gt;diff visualizations&lt;&#x2F;a&gt; to make it clear what files need to change when I update my dotfiles repository.&lt;&#x2F;p&gt;
+&lt;p&gt;Here is an example of it in action:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;dotpatina&#x2F;update-patina.gif&quot; alt=&quot;patina apply gif&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;For more information about dotpatina, see the &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;axis7818&#x2F;dotpatina&quot;&gt;GitHub repository&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;being-a-beginner-again&quot;&gt;Being a Beginner Again&lt;&#x2F;h1&gt;
+&lt;p&gt;I chose Rust primarily because I have never used it before. And, its &lt;a href=&quot;https:&#x2F;&#x2F;niklas-heer.github.io&#x2F;speed-comparison&#x2F;&quot;&gt;performance&lt;&#x2F;a&gt; &amp;amp; &lt;a href=&quot;https:&#x2F;&#x2F;www.nsa.gov&#x2F;Press-Room&#x2F;Press-Releases-Statements&#x2F;Press-Release-View&#x2F;Article&#x2F;3608324&#x2F;us-and-international-partners-issue-recommendations-to-secure-software-products&#x2F;&quot;&gt;memory safety&lt;&#x2F;a&gt; guarantees sound like it would make a fun language for future projects.&lt;&#x2F;p&gt;
+&lt;p&gt;My objective was to build a “production ready” (in quotes because I have no expectations that anyone other than me will use dotpatina) tool from the ground up using a new language and toolchain. I just wanted to be a beginner again, and Rust’s famously steep learning curve seemed like the perfect choice.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;dotpatina&#x2F;rust_learning_curve.png&quot; alt=&quot;Rust learning curve&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;beginner-rust-resources&quot;&gt;Beginner Rust Resources&lt;&#x2F;h2&gt;
+&lt;p&gt;Before really building anything, I started with the general Rust tutorials.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;rust-by-example&#x2F;&quot;&gt;rust by example&lt;&#x2F;a&gt;: Very good comprehensive language overview&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;rustlings.cool&#x2F;&quot;&gt;rustlings&lt;&#x2F;a&gt;: Exercises to test Rust knowledge&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;learnxinyminutes.com&#x2F;rust&#x2F;&quot;&gt;Learn X in Y Minutes (Where X = Rust)&lt;&#x2F;a&gt;: My personal favorite website for getting familiar with a new language&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;These were good introductions and served to introduce me to &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;cargo&#x2F;guide&#x2F;why-cargo-exists.html&quot;&gt;cargo&lt;&#x2F;a&gt;, Rust’s toolchain, and concepts (like &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;rust-by-example&#x2F;scope&#x2F;borrow.html&quot;&gt;borrowing&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;doc.rust-lang.org&#x2F;rust-by-example&#x2F;scope&#x2F;lifetime.html&quot;&gt;lifetimes&lt;&#x2F;a&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;Compared to learning other programming languages, Rust has great resources for gaining hands-on practice right from the start. And, many of these resources guide you through error scenarios and how to fix them. Too often, introductory material will stop after the happy path where everything works as intended.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-rust-software-development-lifecycle&quot;&gt;The Rust Software Development Lifecycle&lt;&#x2F;h2&gt;
+&lt;p&gt;With Dotpatina, I didn’t just want to write the Rust code for a CLI. I wanted to write tests, publish it to a public place, and include documentation.&lt;&#x2F;p&gt;
+&lt;p&gt;I used Rust and cargo for running tests and formatting. This was one of my favorite parts of the Rust language because of how consistent the tooling is across cargo crates.&lt;&#x2F;p&gt;
+&lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;dotpatina&quot;&gt;dotpatina create is published to crates.io&lt;&#x2F;a&gt; automatically when changes are &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;axis7818&#x2F;dotpatina&#x2F;actions&#x2F;workflows&#x2F;continuous-deployment.yaml&quot;&gt;pushed to main&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;crate&#x2F;dotpatina&#x2F;latest&quot;&gt;docs.rs&lt;&#x2F;a&gt; hosts documentation for any crates published to crates.io. But, I also included &lt;a href=&quot;https:&#x2F;&#x2F;camerontaylor.dev&#x2F;dotpatina&#x2F;dotpatina&#x2F;index.html&quot;&gt;documentation hosting with GitHub pages&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;vscode-vs-rust-rover&quot;&gt;VSCode vs Rust Rover&lt;&#x2F;h3&gt;
+&lt;p&gt;While building dotpatina, I also tested two development environments: &lt;a href=&quot;https:&#x2F;&#x2F;code.visualstudio.com&#x2F;&quot;&gt;VSCode&lt;&#x2F;a&gt; with the &lt;a href=&quot;https:&#x2F;&#x2F;marketplace.visualstudio.com&#x2F;items?itemName=rust-lang.rust-analyzer&quot;&gt;rust-analyzer extension&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;www.jetbrains.com&#x2F;rust&#x2F;&quot;&gt;RustRover by Jetbrains&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Generally, I found Rust Rover to be the better experience for working directly with Rust code. It is easier to run Rust tests, cargo commands, and viewing Rust library documentation. However, the GitHub Copilot experience (details below) was better in VSCode.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;learning-rust-with-ai-assistance&quot;&gt;Learning Rust with AI Assistance&lt;&#x2F;h1&gt;
+&lt;p&gt;After learning the basics of Rust, but before diving into Rust development, I decided to make a conscious effort to use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;features&#x2F;copilot&quot;&gt;GitHub Copilot&lt;&#x2F;a&gt; (with the o1 preview model) as an AI programming assistant. This was my first honest effort using these tools on a “real” project. So, I will summarize what I thought about GitHub Copilot with tooling that I am not an expert in.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;explaining-errors&quot;&gt;Explaining Errors&lt;&#x2F;h2&gt;
+&lt;p&gt;My favorite use of GitHub Copilot is explaining errors. It doesn’t take long after starting a Rust program until running into your first compiler error. And, a regular part of working with Rust is dealing with the borrow checker. Since there are whole classes of compile time errors that would be runtime errors in traditional languages, it is very easy to provide error information as context to GitHub Copilot.&lt;&#x2F;p&gt;
+&lt;p&gt;Before too long, I found myself defaulting to GitHub Copilot to explain an error. Invoking the &lt;code&gt;&#x2F;explain&lt;&#x2F;code&gt; quick action is just a keyboard shortcut away, and is much quicker than copying relevant error information, searching the web, and finding a relevant (&lt;a href=&quot;https:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;76758400&#x2F;cannot-return-value-referencing-local-variable-data-owned-by-current-function&quot;&gt;probably Stack Overflow&lt;&#x2F;a&gt;) link.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;dotpatina&#x2F;explain-using-copilot-1.png&quot; alt=&quot;Explain using Copilot tooltip&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The GitHub Copilot chat view shows what portion of the code was referenced and explains a few potential solutions. In this case, returning values instead of references is the suggested solution.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;dotpatina&#x2F;explain-using-copilot-2.png&quot; alt=&quot;Explain using Copilot response&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Except… the code is already doing that. And cloning doesn’t fix the error either.&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;dotpatina&#x2F;explain-using-copilot-3.png&quot; alt=&quot;Updated code with clone&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;dotpatina&#x2F;explain-using-copilot-4.png&quot; alt=&quot;Copilot’s updated explanation&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;So, why is this my favorite part of using GitHub Copilot?&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Well, because it helped me explore the error &lt;strong&gt;as it related to my code specifically&lt;&#x2F;strong&gt;. GitHub Copilot generally accounts for specifics to my codebase that are provided via context. When simply searching for error help online, the search results are independent of the code subject to the error. It becomes the responsibility of the programmer to translate help to their codebase. GitHub Copilot helps with this translation.&lt;&#x2F;p&gt;
+&lt;p&gt;In other instances of explaining and fixing errors, GitHub Copilot would provide solutions that technically worked. These &lt;strong&gt;technically correct&lt;&#x2F;strong&gt; solutions fell into 3 buckets (in order of frequency):&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Solutions that were the “best” for the job. At least to my knowledge.&lt;&#x2F;li&gt;
+&lt;li&gt;Solutions that were not the “best”, and I had to continue iterating before settling on a final implementation.&lt;&#x2F;li&gt;
+&lt;li&gt;Solutions that were the “best” because they were &lt;strong&gt;better&lt;&#x2F;strong&gt; than my initial intentions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;This experience did not completely replace &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;RTFM&quot;&gt;RTFM&lt;&#x2F;a&gt; or web search. The challenge seems to be identifying and providing the proper context to GitHub Copilot to generate a helpful response. But, it has become my first line of defense against the &lt;u class=&quot;red-squiggly&quot;&gt;red underlines&lt;&#x2F;u&gt; in my IDE.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;repetitive-or-one-off-tasks&quot;&gt;Repetitive or One-Off Tasks&lt;&#x2F;h2&gt;
+&lt;p&gt;When it comes to actually generating code, I found GitHub Copilot to be particularly helpful in 2 places: very repetitive code and one-off tasks that might be done once per project.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;repetitive-code&quot;&gt;Repetitive Code&lt;&#x2F;h3&gt;
+&lt;p&gt;When developing software, I will almost religiously enforce &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Don%27t_repeat_yourself&quot;&gt;DRY&lt;&#x2F;a&gt; principals. The one constant exception to this is when writing unit tests. This allows unit tests to serve as self-contained examples as well. And, debugging tests is easier without the extra layers of abstraction that reduce repeated code.&lt;&#x2F;p&gt;
+&lt;p&gt;In addition to the repetitive nature, unit tests often have an explicit naming pattern. For example, test names might follow the template:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; class=&quot;language-rust z-code&quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-annotation z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-annotation z-rust&quot;&gt;#&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-rust&quot;&gt;[&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-annotation z-rust&quot;&gt;test&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-rust&quot;&gt;]&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-storage z-type z-function z-rust&quot;&gt;fn&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function z-rust&quot;&gt;code_under_test_does_X_when_Y&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-parameters z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-parameters z-begin z-rust&quot;&gt;(&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-parameters z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-parameters z-end z-rust&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-block z-begin z-rust&quot;&gt;{&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;  &lt;span class=&quot;z-comment z-line z-double-slash z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-rust&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt; Arrange
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;  &lt;span class=&quot;z-comment z-line z-double-slash z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-rust&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt; ... set up conditions for &amp;quot;Y&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;  &lt;span class=&quot;z-comment z-line z-double-slash z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-rust&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt; Act
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;  &lt;span class=&quot;z-comment z-line z-double-slash z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-rust&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt; ... invoke &amp;quot;code_under_test&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;  &lt;span class=&quot;z-comment z-line z-double-slash z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-rust&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt; Assert
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;  &lt;span class=&quot;z-comment z-line z-double-slash z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-rust&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt; ... validate &amp;quot;X&amp;quot; happened
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-block z-end z-rust&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;The repetitive nature of unit tests and clear test naming creates perfect conditions for GitHub Copilot to generate large portions of code. In terms of pure time savings, I found this to be the most helpful use of GitHub Copilot.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;one-off-tasks&quot;&gt;One-Off Tasks&lt;&#x2F;h3&gt;
+&lt;p&gt;On the other end of the spectrum are one-off tasks. These are the tasks that happen infrequently enough that it is hard to become an “expert” in the syntax.&lt;&#x2F;p&gt;
+&lt;p&gt;When building Dotpatina, I created GitHub Actions workflows for continuous integration and continuous deployment. This is a one-time set up task and requires specific yaml syntax.&lt;&#x2F;p&gt;
+&lt;p&gt;A quick comment, and GitHub Copilot suggests the proper yaml for triggering a workflow under the desired conditions.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;dotpatina&#x2F;gh-actions.png&quot; alt=&quot;GitHub Actions autocomplete&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;my-concerns-with-ai-pair-programming&quot;&gt;My Concerns with AI Pair Programming&lt;&#x2F;h2&gt;
+&lt;p&gt;Generative AI and AI Pair Programming is here to stay, and I believe Software Engineers will need to make use of this technology (where it provides real benefit) in order to stay relevant in the job market.However, I do have some concerns with generative AI’s impact on the industry.&lt;&#x2F;p&gt;
+&lt;p&gt;I worry about its ability to generate hidden &lt;strong&gt;technical debt&lt;&#x2F;strong&gt;, especially when code is not thoroughly reviewed by an expert. Even if code functions perfectly. Inefficient code is harder to maintain and makes less code less &lt;a href=&quot;https:&#x2F;&#x2F;www.green-coding.io&#x2F;&quot;&gt;green&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;I worry about the &lt;strong&gt;accessibility&lt;&#x2F;strong&gt; of programming. Learning to code had been very accessible to people, only requiring a computer and an internet connection. While there are cheaper AI pair programmers and GitHub Copilot has a free tier, it is still expensive to get “quality and quantity” use out of AI pair programmers.&lt;&#x2F;p&gt;
+&lt;p&gt;And, I worry that the &lt;strong&gt;craftsmanship&lt;&#x2F;strong&gt; of computer programming will lose value. Although admittedly, this one makes me sound like a horse in the age of the automobile.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;takeaways&quot;&gt;Takeaways&lt;&#x2F;h1&gt;
+&lt;p&gt;Taking the time to learn a new programming language and complete a full end-to-end project was a fun exercise. Putting an intentional effort into using an AI pair programmer in this context let me evaluate GitHub Copilot as a tool without the pressures of deadlines or scrutiny of others. And, this has given me motivation for starting or completing other side-projects to satisfy my desire to build Software outside the context of my day job.&lt;&#x2F;p&gt;
+&lt;p&gt;Building on my new knowledge of Rust, I plan on exploring &lt;a href=&quot;https:&#x2F;&#x2F;bevyengine.org&#x2F;&quot;&gt;game development with Bevy&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;v2.tauri.app&#x2F;&quot;&gt;cross-platform app development with Tauri&lt;&#x2F;a&gt;. I am also interested in evaluating &lt;a href=&quot;https:&#x2F;&#x2F;www.continue.dev&#x2F;&quot;&gt;Continue&lt;&#x2F;a&gt; with local &lt;a href=&quot;https:&#x2F;&#x2F;ollama.com&#x2F;&quot;&gt;Ollama models&lt;&#x2F;a&gt; as a more accessible AI pair programmer alternative.&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">My experience learning Rust and building dotpatina</summary>
+        </entry><entry xml:lang="en">
+        <title>Hello, World!</title>
+        <published>2025-01-25T00:00:00+00:00</published>
+        <updated>2025-01-25T00:00:00+00:00</updated>
+        <author>
+            <name>Cameron Taylor</name>
+        </author>
+        <link rel="alternate" href="https://camerontaylor.dev/blog/hello/" type="text/html"/>
+        <id>https://camerontaylor.dev/blog/hello/</id>
+        
+            <content type="html">&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;keyboard.png&quot; alt=&quot;mouse and keyboard on a desk&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;This is my first blog post on my new website! Look forward to more as I work on porting over my previous website and update those posts.&lt;&#x2F;p&gt;
+&lt;p&gt;I also intend on contributing posts more regularly going forward!&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">My first blog post</summary>
+        </entry><entry xml:lang="en">
+        <title>PortraitWorks</title>
+        <published>2020-01-14T00:00:00+00:00</published>
+        <updated>2020-01-14T00:00:00+00:00</updated>
+        <author>
+            <name>Cameron Taylor</name>
+        </author>
+        <link rel="alternate" href="https://camerontaylor.dev/blog/portrait-works/" type="text/html"/>
+        <id>https://camerontaylor.dev/blog/portrait-works/</id>
+        
+            <content type="html">&lt;h4 id=&quot;check-out-portraitworks-and-download-it-on-ios-or-android&quot; class=&quot;centered-text&quot;&gt;Check out &lt;a href=&quot;https:&#x2F;&#x2F;www.portrait.works&#x2F;&quot;&gt;PortraitWorks&lt;&#x2F;a&gt; and download it on iOS or Android!&lt;&#x2F;h4&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;portraits.jpg&quot; alt=&quot;portraits&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;A lot of my free time and energy has been put into developing Portrait Workshop with with the Worldspinner team, and we have &lt;a href=&quot;https:&#x2F;&#x2F;www.kickstarter.com&#x2F;projects&#x2F;worldspinner&#x2F;portrait-workshop&#x2F;&quot;&gt;launched a kickstarter&lt;&#x2F;a&gt; that will help us bring it to market. Check it out if you are looking for a great tool to build characters for games, stories, or online avatars!&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">A post about the PortraitWorks Kickstarter</summary>
+        </entry>
+</feed>
