@@ -19,6 +19,9 @@ The tabi theme is included as a git submodule.
 ```sh
 git clone https://github.com/axis7818/axis7818.github.io
 git submodule update --init --recursive
+
+# Configure git to auto-update the submodule when pulling:
+git config submodule.recurse true
 ```
 
 ### 2. Install Zola
