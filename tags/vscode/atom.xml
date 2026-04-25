@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://camerontaylor.dev/feed_style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <tabi:metadata xmlns:tabi="https://github.com/welpo/tabi">
+        <tabi:base_url>https:&#x2F;&#x2F;camerontaylor.dev&#x2F;</tabi:base_url>
+        <tabi:separator>
+            •
+        </tabi:separator>
+        <tabi:about_feeds>This is a web feed, also known as an Atom feed. Subscribe by copying the URL from the address bar into your newsreader. Visit About Feeds to learn more and get started. It&#x27;s free.</tabi:about_feeds>
+        <tabi:visit_the_site>Visit website</tabi:visit_the_site>
+        <tabi:recent_posts>Recent posts</tabi:recent_posts>
+        <tabi:last_updated_on>Updated on $DATE</tabi:last_updated_on>
+        <tabi:default_theme></tabi:default_theme>
+        <tabi:post_listing_date>both</tabi:post_listing_date>
+        <tabi:current_section>VSCode</tabi:current_section>
+    </tabi:metadata><link rel="extra-stylesheet" href="https://camerontaylor.dev/skins/axis7818.css?h=cdb8697ca14ade6b2d00" /><title>~/camerontaylor.dev - VSCode</title>
+        <subtitle>A personal website for Cameron Taylor</subtitle>
+    <link href="https://camerontaylor.dev/tags/vscode/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://camerontaylor.dev/tags/vscode/" rel="alternate" type="text/html"/>
+    <generator uri="https://www.getzola.org/">Zola</generator><updated>2025-12-16T00:00:00+00:00</updated><id>https://camerontaylor.dev/tags/vscode/atom.xml</id><entry xml:lang="en">
+        <title>Fixing GitHub Copilot Inline Suggestions</title>
+        <published>2025-09-17T00:00:00+00:00</published>
+        <updated>2025-12-16T00:00:00+00:00</updated>
+        <author>
+            <name>Cameron Taylor</name>
+        </author>
+        <link rel="alternate" href="https://camerontaylor.dev/blog/fixing-ghcp-inline-suggestions/" type="text/html"/>
+        <id>https://camerontaylor.dev/blog/fixing-ghcp-inline-suggestions/</id>
+        
+            <content type="html">&lt;p&gt;and other improvements to GitHub Copilot usability…&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;camerontaylor.dev&#x2F;blog&#x2F;fixing-ghcp-inline-suggestions&#x2F;#better-inline-suggestions&quot;&gt;Better Inline Suggestions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;camerontaylor.dev&#x2F;blog&#x2F;fixing-ghcp-inline-suggestions&#x2F;#fix-tab-completion-with-terminal-suggestions&quot;&gt;Fix Tab Completion with Terminal Suggestions&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h2 id=&quot;better-inline-suggestions&quot;&gt;Better Inline Suggestions&lt;&#x2F;h2&gt;
+&lt;p&gt;One of the most frustrated things about using GitHub Copilot has been the default behavior of inline suggestions. If I were piloting a plane, it would be very annoying if the copilot decided to reach over and grab my controls any time it pleased.&lt;&#x2F;p&gt;
+&lt;p&gt;However, there are times when I do wish I had access to these suggestions, so I do not want to disable them completely.&lt;&#x2F;p&gt;
+&lt;p&gt;The following shows how to disable inline suggestions by default and invoke it with an explicit keyboard shortcut.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;disable-inline-suggestions&quot;&gt;Disable Inline Suggestions&lt;&#x2F;h3&gt;
+&lt;p&gt;Add the following to your VSCode user settings. This disables inline suggestions.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;json&quot; class=&quot;language-json z-code&quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-mapping z-begin z-json&quot;&gt;{&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;    &lt;span class=&quot;z-comment z-line z-double-slash z-js&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-json&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt; other settings . . .
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;    &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-key z-json&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;editor.inlineSuggest.enabled&lt;span class=&quot;z-punctuation z-definition z-string z-end z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-separator z-mapping z-key-value z-json&quot;&gt;:&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-constant z-language z-json&quot;&gt;false&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-mapping z-end z-json&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;trigger-inline-suggestions&quot;&gt;Trigger Inline Suggestions&lt;&#x2F;h3&gt;
+&lt;p&gt;When you wish to invoke inline suggestions, use the &lt;code&gt;editor.action.inlineSuggest.trigger&lt;&#x2F;code&gt; vscode command.&lt;&#x2F;p&gt;
+&lt;p&gt;By default, this is bound to &lt;code&gt;alt+\&lt;&#x2F;code&gt; on windows and &lt;code&gt;opt+\&lt;&#x2F;code&gt; on mac.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;accept-inline-suggestions&quot;&gt;Accept Inline Suggestions&lt;&#x2F;h3&gt;
+&lt;p&gt;One the suggestion appears, it can be accepted as normal with &lt;code&gt;tab&lt;&#x2F;code&gt;. Or, using the &lt;code&gt;editor.action.inlineSuggest.acceptNextWord&lt;&#x2F;code&gt; and &lt;code&gt;editor.action.inlineSuggest.acceptNextLine&lt;&#x2F;code&gt; vscode commands, the first parts of the suggestions can be accepted. These are helpful when only the first portion of the inline suggestion is desired.&lt;&#x2F;p&gt;
+&lt;p&gt;By default, &lt;code&gt;editor.action.inlineSuggest.acceptNextWord&lt;&#x2F;code&gt; is bound to &lt;code&gt;ctrl+right&lt;&#x2F;code&gt; on windows and &lt;code&gt;cmd+right&lt;&#x2F;code&gt; on mac. But, &lt;code&gt;editor.action.inlineSuggest.acceptNextLine&lt;&#x2F;code&gt; has no keybinding, so you will need to make a custom shortcut.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fixing-ghcp-inline-suggestions&#x2F;incremental-inline-suggest.gif&quot; alt=&quot;screen recording of using inline suggestions&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fix-tab-completion-with-terminal-suggestions&quot;&gt;Fix Tab Completion with Terminal Suggestions&lt;&#x2F;h2&gt;
+&lt;p&gt;GitHub Copilot includes suggestions for completing commands when using the integrated terminal in VSCode. By default, pressing &lt;code&gt;tab&lt;&#x2F;code&gt; or &lt;code&gt;enter&lt;&#x2F;code&gt; will execute the first command, which is annoying because tab completion is deeply ingrained in the muscle memory of anyone who uses a terminal regularly.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;fixing-ghcp-inline-suggestions&#x2F;inline-suggest.png&quot; alt=&quot;screenshot of inline suggestions&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;No… I don’t want to clone a whole repo in my current project…&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;Setting the selection mode in user settings to &lt;code&gt;&quot;never&quot;&lt;&#x2F;code&gt; will require first navigating to a suggestion using arrow keys.&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;json&quot; class=&quot;language-json z-code&quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-mapping z-begin z-json&quot;&gt;{&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;    &lt;span class=&quot;z-comment z-line z-double-slash z-js&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-comment z-json&quot;&gt;&#x2F;&#x2F;&lt;&#x2F;span&gt; other settings . . .
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;  &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-key z-json&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;terminal.integrated.suggest.selectionMode&lt;span class=&quot;z-punctuation z-definition z-string z-end z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-separator z-mapping z-key-value z-json&quot;&gt;:&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;never&lt;span class=&quot;z-punctuation z-definition z-string z-end z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-mapping z-pair z-json&quot;&gt;,&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-mapping z-end z-json&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+</content>
+        <summary type="html">and other improvements to GitHub Copilot usability...</summary>
+        </entry>
+</feed>
