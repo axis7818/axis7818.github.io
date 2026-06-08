@@ -26,6 +26,8 @@ git config submodule.recurse true
 
 ### 2. Install Zola
 
+This site has been verified to work with Zola version `0.22.1`.
+
 ```sh
 # on macOS
 brew install zola
