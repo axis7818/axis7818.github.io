@@ -9,7 +9,11 @@ template = "info-page.html"
 
 # I am a Software Engineer
 
-I am a Software Engineer who is driven by a passion for learning and applying new technologies in innovative ways. Through my work, I strive to build clear and simple solutions to challenging problems in cloud computing, systems programming, and computer graphics. I have designed and built software systems that provide value for organizations ranging from small start-up teams to some of the world’s largest enterprise businesses.
+I am a Software Engineer who thrives at the intersection of **technical innovation** and **sound engineering principles**.
+
+I believe technology, _when applied thoughtfully and intentionally_, has the power to **reclaim valuable time** and **amplify what we can achieve** with our available resources.
+
+Through my work, I strive to build clear and simple solutions to challenging problems in cloud computing, systems programming, and computer graphics. I have designed and built software systems that provide value for organizations ranging from small start-up teams to some of the world’s largest enterprise organizations.
 
 ## Microsoft
 
